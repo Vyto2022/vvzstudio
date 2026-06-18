@@ -50,18 +50,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   // 4. ОТПРАВКА ФОРМЫ В GOOGLE SHEETS
   // ==========================================
-  // Ищем форму либо по ID (VVZ Studio), либо по data-атрибуту (Garage Dupont)
-  const quoteForm = document.getElementById("quoteForm") || document.querySelector("[data-contact-form]");
+  // Ищем формы либо по ID (VVZ Studio), либо по data-атрибуту (Garage Dupont)
+  const leadForms = Array.from(document.querySelectorAll("#quoteForm, [data-contact-form]"));
 
-  if (quoteForm) {
+  leadForms.forEach((quoteForm) => {
+    quoteForm.setAttribute("novalidate", "novalidate");
+
+    const setFieldLimits = (name, attrs) => {
+      const field = quoteForm.querySelector(`[name="${name}"]`);
+      if (!field) return;
+      Object.entries(attrs).forEach(([attr, value]) => field.setAttribute(attr, value));
+    };
+
+    setFieldLimits("name", { minlength: "2", maxlength: "80" });
+    setFieldLimits("email", { maxlength: "160" });
+    setFieldLimits("phone", { maxlength: "40" });
+    setFieldLimits("city", { maxlength: "80" });
+    setFieldLimits("project", { maxlength: "80" });
+    setFieldLimits("message", { minlength: "10", maxlength: "1500" });
+
     quoteForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const btn = quoteForm.querySelector('button[type="submit"]');
-      const status = document.getElementById("formStatus") || document.createElement("div");
+      const status = quoteForm.querySelector("#formStatus, [data-form-status]") || document.getElementById("formStatus") || document.createElement("div");
 
       // Если блока статуса нет (например, во французском макете), создаем его
-      if (!document.getElementById("formStatus")) {
+      if (!status.parentElement) {
         status.id = "formStatus";
         status.style.marginTop = "10px";
         status.style.fontSize = "14px";
@@ -79,6 +94,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Сбор данных
       const formData = new FormData(quoteForm);
+      const trimmedValue = (...keys) => {
+        for (const key of keys) {
+          const value = formData.get(key);
+          if (typeof value === "string" && value.trim()) return value.trim();
+        }
+        return "";
+      };
+      const nameValue = trimmedValue("name");
+      const contactValue = trimmedValue("contact");
+      const emailValue = trimmedValue("email");
+      const phoneValue = trimmedValue("phone");
+      const messageValue = trimmedValue("message");
+      const isInvalid =
+        nameValue.length < 2 ||
+        nameValue.length > 80 ||
+        (!contactValue && !emailValue && !phoneValue) ||
+        messageValue.length < 10 ||
+        messageValue.length > 1500;
+
+      if (isInvalid) {
+        status.style.color = "#ff4d4d";
+        status.style.opacity = "1";
+        status.textContent = "Error. Please contact us via WhatsApp.";
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+        return;
+      }
+
+      formData.set("name", nameValue);
+      formData.set("message", messageValue);
+      if (contactValue) formData.set("contact", contactValue);
+      if (emailValue) formData.set("email", emailValue);
+      if (phoneValue) formData.set("phone", phoneValue);
 
       // Добавляем системные данные
       formData.append("lang", document.documentElement.lang || "en");
@@ -86,22 +134,35 @@ document.addEventListener("DOMContentLoaded", () => {
       formData.append("ua", navigator.userAgent);
       if (!formData.has("hp")) formData.append("hp", ""); // ловушка для ботов
 
-      // ТВОЯ ССЫЛКА ИЗ GOOGLE APPS SCRIPT
-      const GAS_URL = "https://script.google.com/macros/s/1NXAzBiFEQvbSqGaTZLy3ri3AGli9rNYjn0xjZwek8Qt2J-IcxNakDQjX/exec";
+      const params = new URLSearchParams(window.location.search);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id"].forEach((key) => {
+        if (params.has(key) && !formData.has(key)) formData.append(key, params.get(key));
+      });
+      if (document.referrer && !formData.has("referrer")) formData.append("referrer", document.referrer);
+
+      const MYBOT_LEAD_URL = "/api/public/vvzstudio/leads";
 
       try {
-        await fetch(GAS_URL, {
+        const response = await fetch(MYBOT_LEAD_URL, {
           method: "POST",
-          mode: "no-cors",
           body: formData,
         });
+        let result = null;
+        try {
+          result = await response.json();
+        } catch (jsonError) {
+          result = null;
+        }
+        if (!response.ok || !result || result.ok !== true) {
+          throw new Error(result && result.detail ? result.detail : `Lead submit failed: ${response.status}`);
+        }
 
         // После успешной отправки — редирект
         const lang = document.documentElement.lang || "en";
         const thanksPages = {
           en: "thanks.html",
-          fr: "thanks-ru.html",
-          ru: "thanks-fr.html",
+          fr: "thanks-fr.html",
+          ru: "thanks-ru.html",
         };
 
         // Небольшая задержка, чтобы пользователь успел увидеть, что отправка прошла
@@ -120,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.textContent = originalBtnText;
       }
     });
-  }
+  });
 
   // ==========================================
   // 5. ЛИПКАЯ КНОПКА (Sticky CTA) ДЛЯ МОБИЛОК
