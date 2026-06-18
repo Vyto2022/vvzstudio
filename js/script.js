@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initVVZSite() {
   // ==========================================
   // 1. ОБНОВЛЕНИЕ ГОДА В ФУТЕРЕ
   // ==========================================
@@ -208,4 +208,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", updateSticky, { passive: true });
     updateSticky();
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initVVZSite);
+} else {
+  initVVZSite();
+}
