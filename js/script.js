@@ -71,6 +71,7 @@ function initVVZSite() {
 
     quoteForm.addEventListener("submit", async (e) => {
       e.preventDefault();
+      console.info("VVZ lead submit captured");
 
       const btn = quoteForm.querySelector('button[type="submit"]');
       const status = quoteForm.querySelector("#formStatus, [data-form-status]") || document.getElementById("formStatus") || document.createElement("div");
@@ -143,6 +144,7 @@ function initVVZSite() {
       const MYBOT_LEAD_URL = "/api/public/vvzstudio/leads";
 
       try {
+        console.info("VVZ lead POST start");
         const response = await fetch(MYBOT_LEAD_URL, {
           method: "POST",
           body: formData,
@@ -165,12 +167,21 @@ function initVVZSite() {
           ru: "thanks-ru.html",
         };
 
+        console.info("VVZ lead POST ok", result);
+        const leadId = result.id;
+        const thanksPage = thanksPages[lang] || "thanks.html";
+        const redirectUrl = new URL(thanksPage, window.location.href);
+        if (leadId !== undefined && leadId !== null) redirectUrl.searchParams.set("lead_id", leadId);
+        redirectUrl.searchParams.set("source", "mybot");
+
         // Небольшая задержка, чтобы пользователь успел увидеть, что отправка прошла
         status.style.color = "#4CAF50"; // Зеленый цвет успеха
-        status.textContent = "Success! / Succès ! / Успешно!";
+        status.textContent = leadId
+          ? `Success! Lead ID: ${leadId}`
+          : "Success! / Succès ! / Успешно!";
 
         setTimeout(() => {
-          window.location.href = thanksPages[lang] || "thanks.html";
+          window.location.href = redirectUrl.href;
         }, 600);
 
       } catch (error) {
