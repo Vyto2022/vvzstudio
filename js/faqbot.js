@@ -355,7 +355,7 @@
       button.textContent = String(index + 1) + ") " + record.q;
       button.dataset.faqQuestion = record.q;
       button.addEventListener("click", function () {
-        ask(record.q);
+        input.value = record.q;
         input.focus();
       });
 
