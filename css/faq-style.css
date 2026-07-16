@@ -1,0 +1,136 @@
+/* =========================================================
+   Garage Dupont — VVZ Premium Theme
+   ========================================================= */
+
+:root {
+  /* Цвета из твоего основного VVZ CSS */
+  --accent: #2A5CFF;
+  --accent-dark: #1E4AD9;
+  --bg: #0B0D12;
+  --bg2: #0F1320;
+  
+  --text-main: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.68);
+  
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  --border: rgba(255, 255, 255, 0.12);
+  
+  --radius: 14px;
+  --transition: all 0.25s ease;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  /* Добавляем то самое свечение из твоего дизайна */
+  background-image: radial-gradient(1000px 600px at 50% 0%, rgba(42,92,255,.15), transparent 70%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Typography ---------- */
+h1 { font-size: clamp(34px, 5vw, 48px); line-height: 1.15; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(28px, 4vw, 36px); line-height: 1.2; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.02em; }
+h3 { font-size: 20px; margin-bottom: 8px; font-weight: 700; }
+.lead { font-size: 18px; color: var(--text-muted); margin-bottom: 24px; }
+.sub { font-size: 16px; color: var(--text-muted); margin-bottom: 24px; }
+.note { font-size: 13px; color: var(--text-muted); margin-top: 12px; }
+.ul { list-style: none; color: var(--text-muted); }
+.ul li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 13, 18, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 16px 0;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.menu { display: flex; gap: 24px; align-items: center; font-weight: 600; font-size: 14px; }
+.menu a:hover { color: var(--text-main); }
+.burger { display: none; background: none; border: none; color: var(--text-main); width: 32px; height: 32px; cursor: pointer; }
+.mobile { display: none; flex-direction: column; gap: 16px; padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--border); }
+.mobile.is-open { display: flex; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; justify-content: center; align-items: center;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(42,92,255,.3);
+}
+.btn:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(42,92,255,.45); }
+.btn.secondary { background: rgba(255,255,255,.06); border: 1px solid var(--border); box-shadow: none; color: var(--text-main); }
+.btn.secondary:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.2); }
+.btn.ghost { background: transparent; box-shadow: none; color: var(--text-muted); border: 1px solid transparent; }
+.btn.ghost:hover { color: var(--text-main); background: rgba(255,255,255,.05); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Layout & Sections ---------- */
+.section { padding: 80px 0; }
+.hero { padding: 60px 0; position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.grid.cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+
+/* ---------- Cards ---------- */
+.card, .hero-card, .quick {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.price { font-size: 24px; font-weight: 800; color: var(--accent); margin-bottom: 16px; }
+
+/* ---------- Forms ---------- */
+.form { display: flex; flex-direction: column; gap: 16px; }
+.label { display: flex; flex-direction: column; gap: 8px; font-weight: 700; font-size: 14px; color: var(--text-muted); }
+.input, textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: var(--transition);
+}
+.input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(42,92,255,.15); }
+textarea { resize: vertical; min-height: 100px; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 30px 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); }
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 900px) {
+  .hero-grid, .contact { grid-template-columns: 1fr; }
+  .grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .menu { display: none; }
+  .burger { display: block; }
+}
+@media (max-width: 600px) {
+  .grid.cols-3 { grid-template-columns: 1fr; }
+}
