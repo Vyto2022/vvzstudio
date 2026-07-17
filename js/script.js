@@ -136,7 +136,7 @@ function initVVZSite() {
       if (!formData.has("hp")) formData.append("hp", ""); // ловушка для ботов
 
       const params = new URLSearchParams(window.location.search);
-      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id"].forEach((key) => {
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((key) => {
         if (params.has(key) && !formData.has(key)) formData.append(key, params.get(key));
       });
       if (document.referrer && !formData.has("referrer")) formData.append("referrer", document.referrer);
