@@ -7,15 +7,14 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NLCMX9RH0M');
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site pour centre pneus | VVZ Studio</title>
-  <meta name="description" content="Page d’atterrissage et système de génération de demandes pour centres pneus et demandes saisonnières.">
-  <meta property="og:title" content="Site pour centre pneus | VVZ Studio">
-  <meta property="og:description" content="Page d’atterrissage et système de génération de demandes pour centres pneus et demandes saisonnières.">
+  <title>Système pour pneus et service mobile | VVZ Studio</title>
+  <meta name="description" content="Configuration VVZ ERP Suite pour ateliers de pneus et service mobile : demandes, application locale, statuts Telegram et export CSV.">
+  <meta property="og:title" content="Système pour pneus et service mobile | VVZ Studio">
+  <meta property="og:description" content="Configuration VVZ ERP Suite pour ateliers de pneus et service mobile : demandes, application locale, statuts Telegram et export CSV.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="img/social/og-main.webp">
   <meta property="og:url" content="https://vvzstudio.com/tire-shop-website-fr.html">
@@ -28,144 +27,108 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/ui/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/ui/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/ui/apple-touch-icon-180.png">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Site web centre pneus",
-    "description": "Page d’atterrissage et système de génération de demandes pour centres pneus et demandes saisonnières.",
-    "serviceType": "Création de page d’atterrissage pour centres pneus",
-    "url": "https://vvzstudio.com/tire-shop-website-fr.html",
-    "areaServed": {
-      "@type": "Place",
-      "name": "France"
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "VVZ Studio",
-      "url": "https://vvzstudio.com/"
-    },
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Centres pneus, services de roues, changement saisonnier de pneus"
-    }
-  }
-  </script>
-
   <link rel="stylesheet" href="css/style.css?v=13">
-  <link rel="stylesheet" href="css/faqbot.css">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://vvzstudio.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Site web pneus",
-      "item": "https://vvzstudio.com/tire-shop-website-fr.html"
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Qu’est-ce qui compte pour un site de pneus ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pour un site de pneus, la vitesse, le mobile, les offres saisonnières, un appel à l’action rapide et une présentation claire des services sont prioritaires."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Une page d’atterrissage fonctionne-t-elle pour la demande saisonnière ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui. Une page d’atterrissage fonctionne bien pour le changement de pneus, le stockage et les demandes urgentes si elle est pensée pour une prise de contact rapide."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Peut-on connecter le site à un formulaire de demandes et à Telegram ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui. Les demandes du site peuvent être envoyées vers un CRM, Telegram ou d’autres canaux pour un traitement plus rapide."
-      }
-    }
-  ]
-}
-</script>
+  <link rel="stylesheet" href="css/faqbot.css?v=20260716-1">
 </head>
 
-<body class="theme-dark">
+<body id="top">
   <header class="top">
-    <div class="c top-inner">
-      <a class="btn btnS" href="/">← Retour à l’accueil</a>
-      <a class="btn btnP" href="/#contact">Demander un devis</a>
+    <div class="c navbar">
+      <a class="brand" href="/"><span class="dot" aria-hidden="true"></span>VVZ Studio</a>
+      <nav class="navlinks" aria-label="Navigation">
+        <a href="/#work">Fonctionnement.</a>
+        <a href="/#services">Solutions.</a>
+        <a href="/#process">Mise en place.</a>
+        <a href="/#services-seo">Secteurs.</a>
+        <a href="/#pricing">Tarifs.</a>
+        <a href="/#faq">FAQ.</a>
+        <a href="/#contact">Demander une démonstration.</a>
+      </nav>
+      <div class="navRight"><a class="btn btnP navCta" href="/#contact">Demander une démonstration</a></div>
     </div>
   </header>
 
-  <main class="c mt-14">
-    <div class="card hero-card">
-      <h1>Pages d’atterrissage pour centres pneus conçues pour les appels rapides et la demande saisonnière.</h1>
-      <p class="lead">Pour changement de pneus, stockage de roues, équilibrage et urgences où la vitesse mobile et des appels à l’action clairs font la différence.</p>
-      <div class="hero-badges">
-        <span class="tag">VVZ Studio</span>
-        <span class="tag">Français</span>
-        <span class="tag">Page SEO</span>
+  <main>
+    <section>
+      <div class="c">
+        <div class="card hero-card">
+          <h1 class="hero-title">VVZ ERP Suite pour pneus et service mobile.</h1>
+          <p class="lead">Un flux modulaire pour changement saisonnier, stockage de roues, demande urgente et intervention pneus sur site.</p>
+          <div class="hero-badges"><span class="tag">Réception sur le site</span>
+        <span class="tag">File serveur</span>
+        <span class="tag">Application locale</span>
+        <span class="tag">Statuts Telegram</span>
+        </div>
+          <div class="formActions mt-14"><a class="btn btnP" href="/#contact">Demander une démonstration</a><a class="btn" href="/#work">Voir le flux système</a></div>
+        </div>
       </div>
-      <div class="formActions mt-14">
-        <a class="btn btnP" href="/#contact">Demander un devis</a>
-        <a class="btn" href="case-tires-fr.html">Cas client</a>
-      </div>
-    </div>
+    </section>
 
-    <div class="grid2 mt-14">
-      <div class="card">
-        <h2>Pourquoi cette page convertit</h2>
-        <ul><li>Mise en page mobile rapide pour visites urgentes</li><li>Blocs d’offres saisonnières et offre de stockage complémentaire</li><li>Téléphone, carte et WhatsApp visibles immédiatement</li><li>SEO local pour ville + changement de pneus</li></ul>
+    <section>
+      <div class="c">
+        <h2>Demandes typiques</h2>
+        <p class="lead">La configuration est adaptée aux services, formulaires, dictionnaires et règles de travail de l’entreprise.</p>
+        <div class="grid3 mt-14"><div class="card"><h3>Changement saisonnier</h3><p>La demande peut inclure les données du véhicule ou des roues, le service choisi, les coordonnées client, la ville ou l’adresse, la date ou l’heure souhaitée et les commentaires.</p></div>
+        <div class="card"><h3>Demande de stockage</h3><p>La demande peut inclure les données du véhicule ou des roues, le service choisi, les coordonnées client, la ville ou l’adresse, la date ou l’heure souhaitée et les commentaires.</p></div>
+        <div class="card"><h3>Service mobile pneus</h3><p>La demande peut inclure les données du véhicule ou des roues, le service choisi, les coordonnées client, la ville ou l’adresse, la date ou l’heure souhaitée et les commentaires.</p></div>
+        </div>
       </div>
-      <div class="card">
-        <h2>Idéal pour</h2>
-        <p>Garages, diagnostics, mécanique, detailing, pneus et activités locales basées sur la ville.</p>
-        <div class="pills"><span class="pill">site centre pneus</span><span class="pill">page changement pneus</span><span class="pill">site service roues</span><span class="pill">site pneus saisonniers</span><span class="pill">SEO local pneus</span></div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Du formulaire au journal local</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>1) Formulaire client</h3><p>Le client envoie la demande avec les informations nécessaires.</p></div>
+        <div class="card"><h3>2) File serveur</h3><p>Le serveur vérifie la demande et la place dans la file de livraison vers l’entreprise.</p></div>
+        <div class="card"><h3>3) Application locale</h3><p>L’application locale reçoit la demande et conserve la fiche de travail.</p></div>
+        <div class="card"><h3>4) Notification Telegram</h3><p>La personne autorisée reçoit une notification et peut confirmer, annuler ou marquer le travail terminé lorsque l’action est prévue.</p></div>
+        <div class="card"><h3>5) Suivi des statuts</h3><p>Les demandes utilisent les statuts MVP réels : nouvelle, confirmée, terminée et annulée.</p></div>
+        <div class="card"><h3>6) Journal et CSV</h3><p>Le journal local garde l’enregistrement opérationnel, avec export manuel possible en CSV.</p></div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card mt-14">
-      <h2>Requêtes SEO ciblées</h2>
-      <p class="lead">Création de site pour pneus et changement saisonnier. Pages d’atterrissage rapides avec appel à l’action mobile et SEO local.</p>
-      <div class="pills"><span class="pill">site centre pneus</span><span class="pill">page changement pneus</span><span class="pill">site service roues</span><span class="pill">site pneus saisonniers</span><span class="pill">SEO local pneus</span></div>
-    </div>
-
-    <div class="card mt-14">
-      <h2>Liens internes</h2>
-      <p class="lead">Cette page est reliée à l’accueil, aux tarifs et aux cas clients pour renforcer la pertinence et la profondeur d’exploration.</p>
-      <div class="formActions mt-12"><a class="btn" href="case-tires-fr.html">cas client</a><a class="btn" href="pricing-business-fr.html">tarifs</a><a class="btn" href="auto-service-website-fr.html">garage auto</a><a class="btn" href="local-business-website-fr.html">entreprise locale</a><a class="btn" href="/">accueil</a></div>
-    </div>
-
-    <div class="card mt-14" style="text-align:center;padding:40px 20px;">
-      <h2>Besoin d’une page comme celle-ci ?</h2>
-      <p class="lead">Envoyez votre niche, votre ville et votre offre actuelle — VVZ Studio répond avec la structure recommandée et le périmètre.</p>
-      <div class="formActions mt-14">
-        <a class="btn btnP" href="/#contact">Demander un devis</a>
-        <a class="btn" href="case-tires-fr.html">Cas client</a>
+    <section>
+      <div class="c">
+        <h2>Options de livraison</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Intégration à un site existant</h3><p>Connexion de la réception des demandes et du serveur au site actuel après vérification des options sûres.</p></div>
+        <div class="card"><h3>Solution complète clé en main</h3><p>Préparation du site, du serveur, de l’application locale, de Telegram et des modules métier retenus.</p></div>
+        <div class="card"><h3>Module spécifique</h3><p>Configuration ou extension d’un module lorsque le moteur standard nécessite un ajout métier.</p></div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Étapes de mise en place</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Analyse du flux</h3><p>Analyse des services réels, données nécessaires, statuts et conditions d’installation.</p></div>
+        <div class="card"><h3>Configuration du moteur</h3><p>Configuration du moteur prêt, des dictionnaires, modules et règles métier.</p></div>
+        <div class="card"><h3>Test complet</h3><p>Test du parcours depuis le formulaire du site jusqu’au traitement local, l’action Telegram et l’export CSV.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Architecture et contrôle des données</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Données principales locales</h3><p>Les données opérationnelles principales et le journal restent dans l’application locale.</p></div>
+        <div class="card"><h3>Données serveur minimales</h3><p>Le serveur conserve seulement le nécessaire pour livrer et synchroniser les demandes.</p></div>
+        <div class="card"><h3>Adaptateur Telegram</h3><p>Telegram sert aux notifications et actions autorisées; ce n’est pas la base de données.</p></div>
+        <div class="card"><h3>Visibilité hors ligne</h3><p>L’application locale doit afficher l’état de connexion, la dernière synchronisation réussie et la file en attente.</p></div>
+        <div class="card"><h3>Reprise après coupure</h3><p>Les statuts et actions en attente peuvent reprendre après le retour de la connexion.</p></div>
+        <div class="card"><h3>Modules plus tard</h3><p>De nouveaux modules peuvent être ajoutés sans remplacer tout le moteur.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <div class="grid2 mt-14">
+          <div class="card"><h2>Limites</h2><p>Cette page ne promet pas comptabilité, paie, paiements en ligne, planification avancée, analyses, IA, applications mobiles, affectation automatique, API, webhooks, CRM complet ou prix et délais fixes.</p></div>
+          <div class="card"><h2>Prix après analyse du flux</h2><p>Le périmètre et le prix sont définis après examen du flux actuel, du site existant, des modules nécessaires et des conditions d’installation.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Demander une démonstration</a></div></div>
+        </div>
+      </div>
+    </section>
   </main>
 <script src="/js/bot-link.js" defer></script>
 </body>

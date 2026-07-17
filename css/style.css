@@ -232,6 +232,8 @@ p{ margin: 0 0 14px; color: var(--muted); max-width: 70ch; }
 section{ padding: 28px 0; }
 section[id]{ scroll-margin-top: var(--header-offset); }
 section:first-of-type{ padding-top: 26px; }
+.top + main{ padding-top: 22px; }
+.top + main > section:first-child{ padding-top: 0; }
 
 /* ---------- Cards ---------- */
 .card{
@@ -264,11 +266,12 @@ section:first-of-type{ padding-top: 26px; }
 .heroMedia{ margin-top: 14px; }
 .heroImg{
   width: 100%;
+  height: auto;
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,.12);
   box-shadow: var(--shadow);
   background: rgba(255,255,255,.04);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .hero-badges{ margin-top: 12px; display:flex; flex-wrap:wrap; gap:8px; }

@@ -4,7 +4,7 @@
 
   const byPath = () => {
     const p = location.pathname.toLowerCase();
-    if (p.includes("detailing")) return "detailing";
+    if (p.includes("cleaning")) return "cleaning";
     if (p.includes("tires")) return "tires";
     if (p.includes("auto")) return "auto";
     return "landing";

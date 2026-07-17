@@ -19,7 +19,7 @@ Restrictions: no generative AI, no external API, no invented prices, functions, 
 ### Q02
 **Вопрос:** Для каких видов бизнеса подходит система?
 
-**Ответ:** Система может быть адаптирована для автосервисов, детейлинга, автомоек, шиномонтажа, салонов красоты, парикмахерских, строительных и выездных мастеров, небольших магазинов, мастерских, ассоциаций и других локальных компаний. Для каждой отрасли настраиваются собственные услуги, формы и рабочие правила.
+**Ответ:** Система может быть адаптирована для автосервисов, шиномонтажа, клининга и бытовых услуг на выезде, салонов красоты, парикмахерских, строительных и выездных мастеров, небольших магазинов, мастерских, ассоциаций и других локальных компаний. Для каждой отрасли настраиваются собственные услуги, формы, адреса обслуживания и рабочие правила.
 
 ### Q03
 **Вопрос:** Это готовая программа или индивидуальная разработка?
@@ -125,7 +125,7 @@ Restrictions: no generative AI, no external API, no invented prices, functions, 
 ### Q02
 **Question :** Pour quels types d’activité la solution est-elle adaptée ?
 
-**Réponse :** La solution peut être adaptée aux garages, centres de detailing, stations de lavage, ateliers de pneumatiques, salons de coiffure et de beauté, artisans, professionnels mobiles, petits commerces, ateliers, associations et autres entreprises locales. Les services, formulaires et règles de travail sont configurés selon chaque activité.
+**Réponse :** La solution peut être adaptée aux garages, ateliers de pneumatiques, entreprises de nettoyage et services à domicile, salons de coiffure et de beauté, artisans, professionnels mobiles, petits commerces, ateliers, associations et autres entreprises locales. Les services, formulaires, adresses d’intervention et règles de travail sont configurés selon chaque activité.
 
 ### Q03
 **Question :** S’agit-il d’un logiciel prêt à l’emploi ou d’un développement sur mesure ?
@@ -231,7 +231,7 @@ Restrictions: no generative AI, no external API, no invented prices, functions, 
 ### Q02
 **Question:** What types of business can use the system?
 
-**Answer:** The system can be adapted for auto repair shops, detailing studios, car washes, tire shops, hair and beauty salons, construction and mobile tradespeople, small shops, workshops, associations, and other local businesses. Services, forms, and workflow rules are configured for each industry.
+**Answer:** The system can be adapted for auto repair shops, tire shops, cleaning and home-service businesses, hair and beauty salons, construction and mobile tradespeople, small shops, workshops, associations, and other local businesses. Services, forms, service addresses, and workflow rules are configured for each industry.
 
 ### Q03
 **Question:** Is this ready-made software or custom development?
