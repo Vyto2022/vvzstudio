@@ -48,7 +48,7 @@ function initVVZSite() {
   }
 
   // ==========================================
-  // 4. ОТПРАВКА ФОРМЫ В GOOGLE SHEETS
+  // 4. ОТПРАВКА ФОРМЫ В VVZ LEAD SYSTEM
   // ==========================================
   // Ищем формы либо по ID (VVZ Studio), либо по data-атрибуту (Garage Dupont)
   const leadForms = Array.from(document.querySelectorAll("#quoteForm, [data-contact-form]"));
@@ -66,6 +66,7 @@ function initVVZSite() {
     setFieldLimits("email", { maxlength: "160" });
     setFieldLimits("phone", { maxlength: "40" });
     setFieldLimits("city", { maxlength: "80" });
+    setFieldLimits("business", { maxlength: "120" });
     setFieldLimits("project", { maxlength: "80" });
     setFieldLimits("message", { minlength: "10", maxlength: "1500" });
 
@@ -103,14 +104,20 @@ function initVVZSite() {
         return "";
       };
       const nameValue = trimmedValue("name");
-      const contactValue = trimmedValue("contact");
       const emailValue = trimmedValue("email");
       const phoneValue = trimmedValue("phone");
+      const cityValue = trimmedValue("city");
+      const businessValue = trimmedValue("business");
       const messageValue = trimmedValue("message");
       const isInvalid =
         nameValue.length < 2 ||
         nameValue.length > 80 ||
-        (!contactValue && !emailValue && !phoneValue) ||
+        !phoneValue ||
+        phoneValue.length > 40 ||
+        !cityValue ||
+        cityValue.length > 80 ||
+        !businessValue ||
+        businessValue.length > 120 ||
         messageValue.length < 10 ||
         messageValue.length > 1500;
 
@@ -125,9 +132,10 @@ function initVVZSite() {
 
       formData.set("name", nameValue);
       formData.set("message", messageValue);
-      if (contactValue) formData.set("contact", contactValue);
       if (emailValue) formData.set("email", emailValue);
-      if (phoneValue) formData.set("phone", phoneValue);
+      formData.set("phone", phoneValue);
+      formData.set("city", cityValue);
+      formData.set("business", businessValue);
 
       // Добавляем системные данные
       formData.append("lang", document.documentElement.lang || "en");
@@ -141,11 +149,11 @@ function initVVZSite() {
       });
       if (document.referrer && !formData.has("referrer")) formData.append("referrer", document.referrer);
 
-      const MYBOT_LEAD_URL = "/api/public/vvzstudio/leads";
+      const VVZ_LEAD_URL = "/api/public/vvzstudio/leads";
 
       try {
         console.info("VVZ lead POST start");
-        const response = await fetch(MYBOT_LEAD_URL, {
+        const response = await fetch(VVZ_LEAD_URL, {
           method: "POST",
           body: formData,
         });
@@ -172,7 +180,7 @@ function initVVZSite() {
         const thanksPage = thanksPages[lang] || "thanks.html";
         const redirectUrl = new URL(thanksPage, window.location.href);
         if (leadId !== undefined && leadId !== null) redirectUrl.searchParams.set("lead_id", leadId);
-        redirectUrl.searchParams.set("source", "mybot");
+        redirectUrl.searchParams.set("source", "vvzstudio");
 
         // Небольшая задержка, чтобы пользователь успел увидеть, что отправка прошла
         status.style.color = "#4CAF50"; // Зеленый цвет успеха
