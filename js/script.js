@@ -50,6 +50,138 @@ function initVVZSite() {
   // ==========================================
   // 4. ОТПРАВКА ФОРМЫ В VVZ LEAD SYSTEM
   // ==========================================
+  const IDEMPOTENCY_STORAGE_KEY = "vvzstudioLeadIdempotency";
+  let leadIdempotencyMemory = null;
+
+  const getLeadIdempotencyStorage = () => {
+    try {
+      const storage = window.sessionStorage;
+      const testKey = `${IDEMPOTENCY_STORAGE_KEY}:test`;
+      storage.setItem(testKey, "1");
+      storage.removeItem(testKey);
+      return storage;
+    } catch (storageError) {
+      return null;
+    }
+  };
+
+  const generateLeadIdempotencyKey = () => {
+    const cryptoObject = window.crypto || window.msCrypto;
+    if (cryptoObject && typeof cryptoObject.randomUUID === "function") {
+      return cryptoObject.randomUUID();
+    }
+
+    const bytes = new Uint8Array(16);
+    if (cryptoObject && typeof cryptoObject.getRandomValues === "function") {
+      cryptoObject.getRandomValues(bytes);
+    } else {
+      for (let i = 0; i < bytes.length; i += 1) {
+        bytes[i] = Math.floor(Math.random() * 256);
+      }
+    }
+
+    bytes[6] = (bytes[6] & 0x0f) | 0x40;
+    bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+    const hex = Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0"));
+    return [
+      hex.slice(0, 4).join(""),
+      hex.slice(4, 6).join(""),
+      hex.slice(6, 8).join(""),
+      hex.slice(8, 10).join(""),
+      hex.slice(10, 16).join(""),
+    ].join("-");
+  };
+
+  const formDataValueFingerprint = (value) => {
+    if (typeof File !== "undefined" && value instanceof File) {
+      return `file:${value.name}:${value.size}:${value.type}:${value.lastModified}`;
+    }
+    if (typeof Blob !== "undefined" && value instanceof Blob) {
+      return `blob:${value.size}:${value.type}`;
+    }
+    return `text:${String(value)}`;
+  };
+
+  const fingerprintString = (input) => {
+    let hash = 2166136261;
+    for (let i = 0; i < input.length; i += 1) {
+      hash ^= input.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return `${input.length}:${(hash >>> 0).toString(16).padStart(8, "0")}`;
+  };
+
+  const getFinalFormDataFingerprint = (formData) => {
+    const entries = Array.from(formData.entries()).map(([name, value]) => {
+      return `${name}\u001f${formDataValueFingerprint(value)}`;
+    });
+    entries.sort();
+    return fingerprintString(entries.join("\u001e"));
+  };
+
+  const readLeadIdempotencyState = () => {
+    const storage = getLeadIdempotencyStorage();
+    if (!storage) return leadIdempotencyMemory;
+
+    try {
+      const stored = storage.getItem(IDEMPOTENCY_STORAGE_KEY);
+      return stored ? JSON.parse(stored) : leadIdempotencyMemory;
+    } catch (storageError) {
+      return leadIdempotencyMemory;
+    }
+  };
+
+  const writeLeadIdempotencyState = (state) => {
+    leadIdempotencyMemory = state;
+    const storage = getLeadIdempotencyStorage();
+    if (!storage) return;
+
+    try {
+      storage.setItem(IDEMPOTENCY_STORAGE_KEY, JSON.stringify(state));
+    } catch (storageError) {
+      // Keep the in-memory copy when sessionStorage is unavailable or full.
+    }
+  };
+
+  const clearLeadIdempotencyState = (fingerprint, key) => {
+    const currentState = readLeadIdempotencyState();
+    if (
+      !currentState ||
+      currentState.fingerprint !== fingerprint ||
+      currentState.key !== key
+    ) {
+      return;
+    }
+
+    leadIdempotencyMemory = null;
+    const storage = getLeadIdempotencyStorage();
+    if (!storage) return;
+
+    try {
+      storage.removeItem(IDEMPOTENCY_STORAGE_KEY);
+    } catch (storageError) {
+      // Nothing else to clear when persistent storage refuses access.
+    }
+  };
+
+  const getLeadIdempotencyKey = (fingerprint) => {
+    const currentState = readLeadIdempotencyState();
+    if (
+      currentState &&
+      currentState.fingerprint === fingerprint &&
+      typeof currentState.key === "string" &&
+      currentState.key.length > 0 &&
+      currentState.key.length <= 128
+    ) {
+      return currentState.key;
+    }
+
+    const key = generateLeadIdempotencyKey().slice(0, 128);
+    writeLeadIdempotencyState({ fingerprint, key });
+    return key;
+  };
+
   // Ищем формы либо по ID (VVZ Studio), либо по data-атрибуту (Garage Dupont)
   const leadForms = Array.from(document.querySelectorAll("#quoteForm, [data-contact-form]"));
 
@@ -150,11 +282,16 @@ function initVVZSite() {
       if (document.referrer && !formData.has("referrer")) formData.append("referrer", document.referrer);
 
       const VVZ_LEAD_URL = "/api/public/vvzstudio/leads";
+      const formDataFingerprint = getFinalFormDataFingerprint(formData);
+      const idempotencyKey = getLeadIdempotencyKey(formDataFingerprint);
 
       try {
         console.info("VVZ lead POST start");
         const response = await fetch(VVZ_LEAD_URL, {
           method: "POST",
+          headers: {
+            "Idempotency-Key": idempotencyKey,
+          },
           body: formData,
         });
         let result = null;
@@ -166,6 +303,7 @@ function initVVZSite() {
         if (!response.ok || !result || result.ok !== true) {
           throw new Error(result && result.detail ? result.detail : `Lead submit failed: ${response.status}`);
         }
+        clearLeadIdempotencyState(formDataFingerprint, idempotencyKey);
 
         // После успешной отправки — редирект
         const lang = document.documentElement.lang || "en";
