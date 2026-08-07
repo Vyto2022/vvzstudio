@@ -446,6 +446,124 @@ textarea{ resize: vertical; }
 /* ---------- Footer ---------- */
 footer{ border-top: 1px solid rgba(255,255,255,.10); margin-top: 30px; }
 
+/* ---------- VVZ ERP Suite demonstration flow ---------- */
+.demo-flow{ padding-bottom: 42px; }
+.demo-flow__hero{ padding-top: 34px; }
+.demo-flow__eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: rgba(255,255,255,.72);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.demo-flow__eyebrow::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 0 6px rgba(42,92,255,.12);
+}
+.demo-flow__hero-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: 24px;
+  align-items: center;
+}
+.demo-flow__hero-copy h1{ max-width: 780px; }
+.demo-flow__hero-copy .lead{ max-width: 62ch; }
+.demo-flow__proofs{ margin-top: 18px; }
+.demo-flow__browser{
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--radius);
+  background: rgba(7,10,18,.72);
+  box-shadow: var(--shadow);
+}
+.demo-flow__browser-bar{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+.demo-flow__browser-bar span{ width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.34); }
+.demo-flow__browser-url{ margin-left: 6px; color: rgba(255,255,255,.46); font-size: 11px; }
+.demo-flow__browser-body{ padding: 18px; }
+.demo-flow__mock-title{ margin-bottom: 12px; color: rgba(255,255,255,.92); font-weight: 900; }
+.demo-flow__mock-form{ display: grid; gap: 9px; }
+.demo-flow__mock-field{
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.60);
+  font-size: 12px;
+}
+.demo-flow__mock-field--large{ min-height: 54px; }
+.demo-flow__mock-submit{ justify-self: start; padding: 9px 13px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; font-size: 12px; font-weight: 900; }
+.demo-flow__section-intro{ max-width: 72ch; }
+.demo-flow__flow{ display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.demo-flow__step{ position: relative; min-height: 100%; }
+.demo-flow__step-number{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  font-weight: 900;
+}
+.demo-flow__step h3{ margin-bottom: 8px; }
+.demo-flow__step p{ font-size: 14px; }
+.demo-flow__mock-telegram{ border-left: 3px solid #2AABEE; }
+.demo-flow__telegram-head{ display: flex; align-items: center; gap: 9px; margin-bottom: 12px; color: rgba(255,255,255,.92); font-weight: 900; }
+.demo-flow__telegram-icon{ display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #2AABEE; font-size: 13px; }
+.demo-flow__message{ padding: 12px; border-radius: 12px; background: rgba(42,171,238,.10); color: rgba(255,255,255,.78); font-size: 13px; }
+.demo-flow__message strong{ display: block; margin-bottom: 5px; color: rgba(255,255,255,.95); }
+.demo-flow__mock-app{ background: rgba(7,10,18,.58); }
+.demo-flow__app-top{ display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; color: rgba(255,255,255,.88); font-size: 13px; font-weight: 900; }
+.demo-flow__app-id{ color: var(--muted2); font-weight: 700; }
+.demo-flow__status-row{ display: flex; flex-wrap: wrap; gap: 7px; }
+.demo-flow__status{ padding: 6px 8px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; color: rgba(255,255,255,.58); font-size: 11px; font-weight: 900; }
+.demo-flow__status.is-done{ border-color: rgba(42,92,255,.48); background: rgba(42,92,255,.16); color: rgba(255,255,255,.92); }
+.demo-flow__status.is-current{ border-color: rgba(124,58,237,.65); background: rgba(124,58,237,.20); color: rgba(255,255,255,.96); }
+.demo-flow__result{ border-color: rgba(42,92,255,.35); background: linear-gradient(135deg, rgba(42,92,255,.14), rgba(124,58,237,.12)); }
+.demo-flow__result-grid{ display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(240px, .85fr); gap: 18px; align-items: center; }
+.demo-flow__result-list{ display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+.demo-flow__result-list li{ color: rgba(255,255,255,.76); font-size: 14px; }
+.demo-flow__result-list li::before{ content: "✓"; display: inline-block; width: 22px; color: #7C9BFF; font-weight: 900; }
+.demo-flow__result-sequence{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.demo-flow__result-arrow{ color: rgba(255,255,255,.48); font-size:18px; font-weight:900; }
+.demo-flow__csv{ padding: 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; background: rgba(0,0,0,.18); }
+.demo-flow__csv-label{ margin-bottom: 9px; color: rgba(255,255,255,.58); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; }
+.demo-flow__csv code{ color: rgba(255,255,255,.82); font-size: 12px; line-height: 1.7; }
+.demo-flow__cta{ text-align: center; }
+.demo-flow__cta p{ margin-left: auto; margin-right: auto; }
+
+@media (max-width: 980px){
+  .demo-flow__hero-grid,
+  .demo-flow__result-grid{ grid-template-columns: 1fr; }
+  .demo-flow__flow{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px){
+  .demo-flow__hero{ padding-top: 22px; }
+  .demo-flow__hero-grid,
+  .demo-flow__flow{ grid-template-columns: 1fr; }
+  .demo-flow__browser-body{ padding: 14px; }
+  .demo-flow__status{ font-size: 10px; }
+  .demo-flow__result-sequence{ gap:6px; }
+  .demo-flow__result-arrow{ font-size:15px; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px){
   .navbar{ grid-template-columns: 1fr; justify-items: center; }

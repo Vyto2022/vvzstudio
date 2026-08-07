@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Démonstration VVZ ERP Suite | De la demande au journal local</title>
+  <meta name="description" content="Découvrez le flux VVZ ERP Suite : demande du site, file serveur, synchronisation, Telegram, application locale, statuts et journal CSV." />
+  <meta property="og:title" content="Démonstration VVZ ERP Suite | De la demande au journal local" />
+  <meta property="og:description" content="Un exemple visuel du parcours d’une demande dans VVZ ERP Suite, du site au journal local." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://vvzstudio.com/img/social/og-main.webp" />
+  <meta property="og:url" content="https://vvzstudio.com/demonstration.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://vvzstudio.com/demonstration.html" />
+  <link rel="alternate" hreflang="en" href="https://vvzstudio.com/demonstration-en.html" />
+  <link rel="alternate" hreflang="fr" href="https://vvzstudio.com/demonstration.html" />
+  <link rel="alternate" hreflang="ru" href="https://vvzstudio.com/demonstration-ru.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vvzstudio.com/demonstration.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/ui/favicon-32.png" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://vvzstudio.com/demonstration.html#webpage","url":"https://vvzstudio.com/demonstration.html","name":"Démonstration VVZ ERP Suite","inLanguage":"fr","breadcrumb":{"@id":"https://vvzstudio.com/demonstration.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://vvzstudio.com/demonstration.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"VVZ Studio","item":"https://vvzstudio.com/"},{"@type":"ListItem","position":2,"name":"Démonstration"}]}]}
+  </script>
+</head>
+<body id="top">
+  <header class="top">
+    <div class="c navbar">
+      <a class="brand" href="/#top"><span class="dot" aria-hidden="true"></span>VVZ Studio</a>
+      <nav class="navlinks" aria-label="Navigation">
+        <a href="#flow">Scénario</a>
+        <a href="#steps">Étapes</a>
+        <a href="#result">Résultat</a>
+        <a href="/demonstration.html">Démonstration</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="navRight">
+        <div class="langMenu" aria-label="Langue">
+          <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
+          <div class="langDropdown" role="menu">
+            <a href="/demonstration-en.html" role="menuitem">English.<span class="langTag">EN</span></a>
+            <a href="/demonstration.html" role="menuitem">Français.<span class="langTag">FR</span></a>
+            <a href="/demonstration-ru.html" role="menuitem">Русский.<span class="langTag">RU</span></a>
+          </div>
+        </div>
+        <a class="btn btnP navCta" href="/#contact">Parler de votre flux</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-flow">
+    <section class="demo-flow__hero">
+      <div class="c demo-flow__hero-grid">
+        <div class="demo-flow__hero-copy">
+          <div class="demo-flow__eyebrow">Démonstration statique · scénario fictif</div>
+          <h1>Une demande, un parcours clair du site jusqu’au résultat.</h1>
+          <p class="lead">Voyez comment VVZ ERP Suite relie le site, la file serveur, la synchronisation Telegram et le travail local dans un seul flux lisible.</p>
+          <div class="proof-row demo-flow__proofs">
+            <div class="proof"><span class="dot" aria-hidden="true"></span>Un scénario de bout en bout.</div>
+            <div class="proof"><span class="dot" aria-hidden="true"></span>Des statuts visibles.</div>
+            <div class="proof"><span class="dot" aria-hidden="true"></span>Un journal local.</div>
+          </div>
+          <div class="formActions mt-14">
+            <a class="btn btnP" href="#steps">Voir les étapes</a>
+            <a class="btn" href="/#contact">Parler de votre projet</a>
+          </div>
+          <div class="cta-row mt-12">
+            <a class="btn" href="https://t.me/vvz_ai_bot" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn" href="mailto:contact@vvzstudio.com">E-mail</a>
+          </div>
+        </div>
+        <div class="demo-flow__browser" aria-label="Formulaire de demande fictif">
+          <div class="demo-flow__browser-bar"><span></span><span></span><span></span><span class="demo-flow__browser-url">demo.local/demande</span></div>
+          <div class="demo-flow__browser-body">
+            <div class="demo-flow__mock-title">Demande de service</div>
+            <div class="demo-flow__mock-form">
+              <div class="demo-flow__mock-field">Nom : Anna Petrova</div>
+              <div class="demo-flow__mock-field">Téléphone : +33 6 00 00 00 00</div>
+              <div class="demo-flow__mock-field">Service : Nettoyage de bureaux</div>
+              <div class="demo-flow__mock-field demo-flow__mock-field--large">Commentaire : visite souhaitée la semaine prochaine</div>
+              <div class="demo-flow__mock-submit">Envoyer la demande</div>
+            </div>
+            <p class="note">Données fictives, uniquement pour la démonstration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="c">
+        <h2>Ce que l’entreprise gagne</h2>
+        <p class="lead demo-flow__section-intro">Au lieu de chercher dans plusieurs messages, l’équipe suit une séquence : demande vérifiée, livrée après synchronisation, prise en charge puis clôturée avec son historique.</p>
+        <div class="demo-flow__flow mt-14">
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">1</span>
+            <h3>Une demande structurée</h3>
+            <p>Le site recueille les informations utiles et crée une fiche de travail compréhensible.</p>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">2</span>
+            <h3>Une file contrôlée</h3>
+            <p>Le serveur vérifie la demande valide et la place dans la file destinée à l’entreprise.</p>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">3</span>
+            <h3>Le bon contexte au bon endroit</h3>
+            <p>Après une synchronisation planifiée, l’application locale et Telegram présentent la même demande à l’équipe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps">
+      <div class="c">
+        <h2>Le scénario de bout en bout</h2>
+        <p class="lead demo-flow__section-intro">Voici une demande fictive d’Anna Petrova. Chaque étape explique l’utilité concrète pour l’opérateur et l’entreprise.</p>
+        <div class="demo-flow__flow mt-14">
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">01</span>
+            <h3>Le client remplit le site</h3>
+            <p>Le formulaire rassemble le nom, le téléphone, le service et le commentaire pour donner du contexte dès le départ.</p>
+            <div class="demo-flow__mock-field">Statut : prêt à être envoyé</div>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">02</span>
+            <h3>Le serveur vérifie</h3>
+            <p>Après validation, la fiche reçoit le statut <strong>Nouvelle</strong> et rejoint la file serveur.</p>
+            <div class="demo-flow__status-row"><span class="demo-flow__status is-current">Nouvelle</span><span class="demo-flow__status">File d’attente</span></div>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">03</span>
+            <h3>Telegram prévient l’équipe</h3>
+            <p>Quand le client local se synchronise, la personne autorisée voit une notification avec le contexte essentiel.</p>
+            <div class="card demo-flow__mock-telegram"><div class="demo-flow__telegram-head"><span class="demo-flow__telegram-icon">➤</span>VVZ ERP Suite</div><div class="demo-flow__message"><strong>Nouvelle demande · #DEMO-1042</strong>Nettoyage de bureaux · Anna Petrova</div></div>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">04</span>
+            <h3>La fiche arrive en local</h3>
+            <p>L’opérateur ouvre la demande dans l’application locale et dispose des éléments nécessaires pour agir.</p>
+            <div class="card demo-flow__mock-app"><div class="demo-flow__app-top"><span>Demandes de travail</span><span class="demo-flow__app-id">#DEMO-1042</span></div><div class="demo-flow__status-row"><span class="demo-flow__status is-done">Nouvelle</span><span class="demo-flow__status is-current">En traitement</span></div></div>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">05</span>
+            <h3>L’opérateur suit les statuts</h3>
+            <p>Le traitement avance clairement : <strong>Nouvelle → En traitement → Contact établi → Terminée</strong>.</p>
+            <div class="demo-flow__status-row"><span class="demo-flow__status is-done">Nouvelle</span><span class="demo-flow__status is-done">En traitement</span><span class="demo-flow__status is-done">Contact établi</span><span class="demo-flow__status is-current">Terminée</span></div>
+          </article>
+          <article class="card demo-flow__step">
+            <span class="demo-flow__step-number">06</span>
+            <h3>Le journal reste disponible</h3>
+            <p>La fiche terminée reste dans le journal local et peut être exportée manuellement en CSV.</p>
+            <div class="demo-flow__csv"><div class="demo-flow__csv-label">local-work-journal.csv</div><code>#DEMO-1042, Terminée<br />Anna Petrova, Nettoyage de bureaux</code></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="result">
+      <div class="c">
+        <div class="card demo-flow__result">
+          <div class="demo-flow__result-grid">
+            <div>
+              <h2>Le résultat pour l’entreprise</h2>
+              <p class="lead">Le responsable voit un processus reproductible, de la demande entrante jusqu’à la fiche locale terminée.</p>
+              <ul class="demo-flow__result-list"><li>moins de recherche dans les conversations ;</li><li>un contexte commun pour l’opérateur ;</li><li>un historique de statuts lisible ;</li><li>un journal local et un export CSV manuel.</li></ul>
+            </div>
+            <div class="demo-flow__csv">
+              <div class="demo-flow__csv-label">Résultat du scénario</div>
+              <div class="demo-flow__result-sequence"><span class="demo-flow__status is-done">Nouvelle</span><span class="demo-flow__result-arrow">→</span><span class="demo-flow__status is-done">En traitement</span><span class="demo-flow__result-arrow">→</span><span class="demo-flow__status is-done">Contact établi</span><span class="demo-flow__result-arrow">→</span><span class="demo-flow__status is-current">Terminée</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-flow__cta" id="contact">
+      <div class="c">
+        <h2>Adaptons ce flux à votre activité</h2>
+        <p class="lead">Expliquez-nous d’où viennent vos demandes et quels statuts votre équipe utilise. La démonstration montre le principe ; le flux réel est défini séparément.</p>
+        <a class="btn btnP" href="/#contact">Accéder au contact VVZ Studio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="c" style="padding:18px 20px;color:gray">
+    <p>© <span id="y">2026</span> VVZ Studio · Solutions modulaires pour entreprises locales.</p>
+    <p>Contact : <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Assistance : <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
+  </footer>
+</body>
+</html>
