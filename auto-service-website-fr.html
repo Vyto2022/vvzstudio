@@ -33,18 +33,42 @@
 
 <body id="top">
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async"></a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="/#work">Fonctionnement.</a>
-        <a href="/#services">Solutions.</a>
-        <a href="/#process">Mise en place.</a>
-        <a href="/#services-seo">Secteurs.</a>
-        <a href="/#pricing">Tarifs.</a>
-        <a href="/#faq">FAQ.</a>
-        <a href="/#contact">Demander une démonstration.</a>
-      </nav>
-      <div class="navRight"><a class="btn btnP navCta" href="/#contact">Demander une démonstration</a></div>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async"></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Langue">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/auto-service-website.html" data-language="en" role="menuitem">Anglais.<span class="langTag">EN</span></a>
+              <a href="/auto-service-website-fr.html" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/auto-service-website-ru.html" data-language="ru" role="menuitem">Russe.<span class="langTag">RU</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="/#work">Fonctionnement.</a>
+          <a href="/#services">Solutions.</a>
+          <a href="/#process">Mise en place.</a>
+          <a href="/#services-seo">Secteurs.</a>
+          <a href="/#pricing">Tarifs.</a>
+          <a href="/#faq">FAQ.</a>
+          <a href="/blog/">Blog.</a>
+        </nav>
+        <div class="navRight"><a class="btn btnP navCta" href="/#contact">Parler de votre projet</a></div>
+      </div>
+      </div>
     </div>
   </header>
 
@@ -53,90 +77,113 @@
       <div class="c">
         <div class="card hero-card">
           <h1 class="hero-title">VVZ ERP Suite pour garages et réparation auto.</h1>
-          <p class="lead">Un flux modulaire pour diagnostics, demandes de réparation, entretien, demandes liées aux pneus et autres opérations d’atelier.</p>
-          <figure class="sectorVisual sectorVisual--auto">
+          <p class="lead">Pendant qu’un mécanicien travaille, un appel peut rester sans réponse. Il faut rappeler, retrouver le véhicule, le diagnostic promis, les pièces à vérifier et les messages déjà échangés. Avec le papier, Excel et la mémoire de chacun, une information importante se disperse vite. Le problème n’est pas le téléphone, Excel ou la messagerie : c’est que le processus dépend trop de la mémoire humaine.</p>
+          <figure class="sectorVisual">
             <img src="img/services/auto-service.png" width="1672" height="941" alt="Visuel VVZ ERP Suite pour le flux de service automobile" decoding="async">
             <figcaption class="sectorVisual__caption">
-              <strong>Automatisation pour les services automobiles</strong>
-              <span>Demandes, planning, suivi des travaux et relation client dans un seul flux local.</span>
+              <strong>Votre façon de travailler reste la base</strong>
+              <span>Nous partons de l’organisation réelle de votre atelier : comment arrivent les demandes, qui les prend en charge, comment vous suivez les véhicules et comment vous travaillez déjà aujourd’hui.</span>
             </figcaption>
           </figure>
-          <div class="hero-badges"><span class="tag">Réception sur le site</span>
-        <span class="tag">File serveur</span>
-        <span class="tag">Application locale</span>
-        <span class="tag">Statuts Telegram</span>
-        </div>
-          <div class="formActions mt-14"><a class="btn btnP" href="/#contact">Demander une démonstration</a><a class="btn" href="/#work">Voir le flux système</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Demandes typiques</h2>
-        <p class="lead">La configuration est adaptée aux services, formulaires, dictionnaires et règles de travail de l’entreprise.</p>
-        <div class="grid3 mt-14"><div class="card"><h3>Diagnostic et réparation</h3><p>La demande peut préciser le véhicule, le problème à diagnostiquer, le service choisi, les coordonnées client, l’atelier et un commentaire.</p></div>
-        <div class="card"><h3>Entretien et contrôle</h3><p>Pour l’entretien, on peut transmettre les données du véhicule, les travaux souhaités, la date ou l’heure et les remarques du client.</p></div>
-        <div class="card"><h3>Demande d’atelier</h3><p>Une demande d’atelier peut contenir le type de réparation, les coordonnées client, l’adresse, la date souhaitée et les commentaires.</p></div>
+          <div class="hero-badges"><span class="tag">Demande client</span>
+        <span class="tag">Véhicule</span>
+        <span class="tag">Travail d’atelier</span>
+        <span class="tag">Historique</span></div>
+          <div class="formActions mt-14"><a href="/#work">Voir le flux système</a></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Du formulaire au journal local</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>1) Formulaire client</h3><p>Le client envoie la demande avec les informations nécessaires.</p></div>
-        <div class="card"><h3>2) File serveur</h3><p>Le serveur vérifie la demande et la place dans la file de livraison vers l’entreprise.</p></div>
-        <div class="card"><h3>3) Application locale</h3><p>L’application locale reçoit la demande et conserve la fiche de travail.</p></div>
-        <div class="card"><h3>4) Notification Telegram</h3><p>La personne autorisée reçoit une notification et peut confirmer, annuler ou marquer le travail terminé lorsque l’action est prévue.</p></div>
-        <div class="card"><h3>5) Suivi des statuts</h3><p>Les demandes utilisent les statuts de travail : nouvelle, confirmée, terminée et annulée.</p></div>
-        <div class="card"><h3>6) Journal et CSV</h3><p>Le journal local garde l’enregistrement opérationnel, avec export manuel possible en CSV.</p></div>
+        <h2>Le vrai problème : l’information dispersée</h2>
+        <p class="lead">Un client attend un rappel, un véhicule reste sur place, le diagnostic évolue et une pièce doit être commandée. L’équipe doit pouvoir voir rapidement qui a contacté le garage, pourquoi, ce qui a déjà été fait et quelle est la prochaine étape.</p>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Avant</h3><p>Appels manqués, messages, feuilles papier, tableaux Excel et détails gardés en tête se mélangent. Le client rappelle souvent pour savoir où en est son véhicule.</p></div>
+          <div class="card"><h3>Après</h3><p>Chaque demande est enregistrée avec le client, le véhicule, le travail prévu, le responsable, le statut et l’historique conservé.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Options de livraison</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Intégration à un site existant</h3><p>Connexion de la réception des demandes et du serveur au site actuel après vérification des options sûres.</p></div>
-        <div class="card"><h3>Solution complète clé en main</h3><p>Préparation du site, du serveur, de l’application locale, de Telegram et des modules métier retenus.</p></div>
-        <div class="card"><h3>Module spécifique</h3><p>Configuration ou extension d’un module lorsque le moteur standard nécessite un ajout métier.</p></div>
+        <h2>Les demandes et tâches d’un garage</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Diagnostic</h3><p>Symptôme décrit, véhicule concerné, priorité et éléments à vérifier par l’atelier.</p></div>
+        <div class="card"><h3>Réparation et pièces</h3><p>Le travail nécessaire est noté avec les pièces à prévoir. L’équipe peut voir ce qui doit être vérifié, ce qui est disponible, ce qui doit être commandé et ce qui bloque encore la réparation.</p></div>
+        <div class="card"><h3>Suivi d’atelier</h3><p>Contrôle, entretien, pneus ou autre tâche avec une personne responsable et des notes utiles.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Un parcours simple, de la demande à l’historique</h2>
+        <div class="grid3 mt-14">
+          <div class="card"><h3>Demande client</h3><p>Le client décrit le problème ou le besoin d’intervention.</p></div>
+          <div class="card"><h3>Véhicule et problème</h3><p>Le véhicule, le motif et les informations utiles sont enregistrés dans la même fiche.</p></div>
+          <div class="card"><h3>Diagnostic et travail</h3><p>L’équipe précise le diagnostic, le travail requis et les pièces à identifier.</p></div>
+          <div class="card"><h3>Nouvelle</h3><p>Une nouvelle demande apparaît dans l’atelier et peut être attribuée à la personne qui doit agir.</p></div>
+          <div class="card"><h3>En traitement</h3><p>Quand quelqu’un la prend en charge, elle passe en traitement et les informations importantes peuvent être ajoutées au fur et à mesure.</p></div>
+          <div class="card"><h3>Terminée et historique</h3><p>Une fois le travail terminé, le statut change, mais toutes les informations restent disponibles dans l’historique.</p></div>
+        </div>
+        <div class="note"><h3>Moins d’appels uniquement pour demander « où en est ma voiture ? »</h3><p>Selon la configuration choisie, le client peut recevoir une confirmation lorsque sa demande est enregistrée, puis une information lorsque le statut change. L’équipe reste concentrée sur le travail au lieu de répondre plusieurs fois à la même question.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Le garage garde ses repères</h2>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Excel peut rester dans le flux</h3><p>Les tableaux existants peuvent continuer à servir. Le journal peut reprendre des colonnes familières : client, véhicule, date, travail, statut, responsable, notes et historique.</p></div>
+          <div class="card"><h3>Un export utilisable dans Excel</h3><p>Les données utiles peuvent être exportées dans un fichier CSV compatible avec Excel, avec une structure adaptée aux informations que vous utilisez réellement.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Étapes de mise en place</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Analyse du flux</h3><p>Analyse des services réels, données nécessaires, statuts et conditions d’installation.</p></div>
-        <div class="card"><h3>Configuration du moteur</h3><p>Configuration du moteur prêt, des dictionnaires, modules et règles métier.</p></div>
-        <div class="card"><h3>Test complet</h3><p>Test du parcours depuis le formulaire du site jusqu’au traitement local, l’action Telegram et l’export CSV.</p></div>
+        <h2>L’information reste accessible là où l’équipe travaille</h2>
+        <div class="grid3 mt-14">
+          <div class="card"><h3>L’outil local</h3><p>Le garage peut disposer de son outil de travail local pour suivre les demandes, véhicules, tâches et statuts.</p></div>
+          <div class="card"><h3>Le serveur</h3><p>Le serveur intervient uniquement pour les fonctions qui en ont besoin, par exemple recevoir une demande depuis le site ou synchroniser certaines informations.</p></div>
+          <div class="card"><h3>Telegram</h3><p>Telegram peut simplement servir d’alerte lorsqu’une nouvelle demande arrive. Le suivi principal reste dans l’outil.</p></div>
+        </div>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Responsabilité visible</h3><p>Chaque tâche peut montrer qui agit, ce qui attend une décision et ce qui a déjà été terminé.</p></div>
+          <div class="card"><h3>Adapté au garage</h3><p>VVZ Studio adapte le journal, les étapes et les rôles à la façon de travailler existante, au lieu d’imposer un produit rigide ou de tout remplacer.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Architecture et contrôle des données</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Données principales locales</h3><p>Les données opérationnelles principales et le journal restent dans l’application locale.</p></div>
-        <div class="card"><h3>Données serveur minimales</h3><p>Le serveur conserve seulement le nécessaire pour livrer et synchroniser les demandes.</p></div>
-        <div class="card"><h3>Adaptateur Telegram</h3><p>Telegram sert aux notifications et actions autorisées; ce n’est pas la base de données.</p></div>
-        <div class="card"><h3>Visibilité hors ligne</h3><p>L’application locale doit afficher l’état de connexion, la dernière synchronisation réussie et la file en attente.</p></div>
-        <div class="card"><h3>Reprise après coupure</h3><p>Les statuts et actions en attente peuvent reprendre après le retour de la connexion.</p></div>
-        <div class="card"><h3>Modules plus tard</h3><p>De nouveaux modules peuvent être ajoutés sans remplacer tout le moteur.</p></div>
-        </div>
+        <h2>Questions fréquentes</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Le workflow est-il obligatoire ?</h3><p>Non. Le parcours demande, véhicule, diagnostic, pièces et réparation sert de base et peut être adapté à l’atelier.</p></div>
+        <div class="card"><h3>Telegram remplace-t-il le journal ?</h3><p>Non. Telegram peut alerter l’équipe ; la fiche, le responsable, le statut et l’historique restent dans l’outil prévu.</p></div>
+        <div class="card"><h3>Faut-il abandonner Excel ?</h3><p>Non. Les colonnes utiles peuvent être reprises et les données peuvent être exportées en CSV compatible avec Excel.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <div class="card"><h2>Démonstration vidéo prochainement</h2><p>Une courte démonstration montrera comment une demande client, un véhicule, un changement de statut et l’historique peuvent être suivis dans le système.</p></div>
       </div>
     </section>
 
     <section>
       <div class="c">
         <div class="grid2 mt-14">
-          <div class="card"><h2>Limites</h2><p>Cette page ne promet pas comptabilité, paie, paiements en ligne, planification avancée, analyses, IA, applications mobiles, affectation automatique, API, webhooks, CRM complet ou prix et délais fixes.</p></div>
-          <div class="card"><h2>Prix après analyse du flux</h2><p>Le périmètre et le prix sont définis après examen du flux actuel, du site existant, des modules nécessaires et des conditions d’installation.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Demander une démonstration</a></div></div>
+          <div class="card"><h2>Un périmètre défini clairement</h2><p>Les fonctions, les accès, les données utilisées et les éventuelles intégrations sont définis avec le garage avant la mise en place.</p></div>
+          <div class="card"><h2>Un prix basé sur votre fonctionnement réel</h2><p>Le prix dépend du processus à organiser, des outils que vous utilisez déjà et des fonctions dont votre garage a réellement besoin. L’objectif n’est pas de vous vendre des modules inutiles.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Parler de votre projet</a></div></div>
         </div>
+        <p class="note mt-14">Découvrez aussi <a href="/">l’ensemble des options et intégrations de VVZ Studio</a>.</p>
       </div>
     </section>
   </main>
+  <footer class="c" style="padding:18px 20px;color:gray">
+    <p>© <span id="y">2026</span> VVZ Studio · VVZ ERP Suite et autres solutions logicielles pour les entreprises locales.</p>
+    <p>Contact : <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Assistance : <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
+  </footer>
 <script src="/js/bot-link.js?v=d75b92d3" defer></script>
+<script src="/js/script.js?v=151c572" defer></script>
 </body>
 </html>

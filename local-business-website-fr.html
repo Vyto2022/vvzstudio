@@ -33,103 +33,61 @@
 
 <body id="top">
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async"></a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="/#work">Fonctionnement.</a>
-        <a href="/#services">Solutions.</a>
-        <a href="/#process">Mise en place.</a>
-        <a href="/#services-seo">Secteurs.</a>
-        <a href="/#pricing">Tarifs.</a>
-        <a href="/#faq">FAQ.</a>
-        <a href="/#contact">Demander une démonstration.</a>
-      </nav>
-      <div class="navRight"><a class="btn btnP navCta" href="/#contact">Demander une démonstration</a></div>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async"></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Langue">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/local-business-website.html" data-language="en" role="menuitem">Anglais.<span class="langTag">EN</span></a>
+              <a href="/local-business-website-fr.html" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/local-business-website-ru.html" data-language="ru" role="menuitem">Russe.<span class="langTag">RU</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="/#work">Fonctionnement.</a>
+          <a href="/#services">Solutions.</a>
+          <a href="/#process">Mise en place.</a>
+          <a href="/#services-seo">Secteurs.</a>
+          <a href="/#pricing">Tarifs.</a>
+          <a href="/#faq">FAQ.</a>
+          <a href="/blog/">Blog.</a>
+        </nav>
+        <div class="navRight"><a class="btn btnP navCta" href="/#contact">Parler de votre projet</a></div>
+      </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="c">
-        <div class="card hero-card">
-          <h1 class="hero-title">VVZ ERP Suite pour entreprises locales.</h1>
-          <p class="lead">Une configuration réutilisable pour ateliers, commerces, associations et services locaux qui ont besoin d’un flux de demandes contrôlé.</p>
-          <div class="hero-badges"><span class="tag">Réception sur le site</span>
-        <span class="tag">File serveur</span>
-        <span class="tag">Application locale</span>
-        <span class="tag">Statuts Telegram</span>
-        </div>
-          <div class="formActions mt-14"><a class="btn btnP" href="/#contact">Demander une démonstration</a><a class="btn" href="/#work">Voir le flux système</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Demandes typiques</h2>
-        <p class="lead">La configuration est adaptée aux services, formulaires, dictionnaires et règles de travail de l’entreprise.</p>
-        <div class="grid3 mt-14"><div class="card"><h3>Demande de service</h3><p>Une demande universelle peut préciser le service, les coordonnées client, l’adresse, la date ou l’heure souhaitée et les commentaires.</p></div>
-        <div class="card"><h3>Suivi client</h3><p>La fiche de travail permet de voir la demande, le statut, les commentaires et la prochaine étape de traitement.</p></div>
-        <div class="card"><h3>Journal local</h3><p>Le journal conserve les enregistrements de services différents et permet un export manuel en CSV.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Du formulaire au journal local</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>1) Formulaire client</h3><p>Le client envoie la demande avec les informations nécessaires.</p></div>
-        <div class="card"><h3>2) File serveur</h3><p>Le serveur vérifie la demande et la place dans la file de livraison vers l’entreprise.</p></div>
-        <div class="card"><h3>3) Application locale</h3><p>L’application locale reçoit la demande et conserve la fiche de travail.</p></div>
-        <div class="card"><h3>4) Notification Telegram</h3><p>La personne autorisée reçoit une notification et peut confirmer, annuler ou marquer le travail terminé lorsque l’action est prévue.</p></div>
-        <div class="card"><h3>5) Suivi des statuts</h3><p>Les demandes utilisent les statuts de travail : nouvelle, confirmée, terminée et annulée.</p></div>
-        <div class="card"><h3>6) Journal et CSV</h3><p>Le journal local garde l’enregistrement opérationnel, avec export manuel possible en CSV.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Options de livraison</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Intégration à un site existant</h3><p>Connexion de la réception des demandes et du serveur au site actuel après vérification des options sûres.</p></div>
-        <div class="card"><h3>Solution complète clé en main</h3><p>Préparation du site, du serveur, de l’application locale, de Telegram et des modules métier retenus.</p></div>
-        <div class="card"><h3>Module spécifique</h3><p>Configuration ou extension d’un module lorsque le moteur standard nécessite un ajout métier.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Étapes de mise en place</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Analyse du flux</h3><p>Analyse des services réels, données nécessaires, statuts et conditions d’installation.</p></div>
-        <div class="card"><h3>Configuration du moteur</h3><p>Configuration du moteur prêt, des dictionnaires, modules et règles métier.</p></div>
-        <div class="card"><h3>Test complet</h3><p>Test du parcours depuis le formulaire du site jusqu’au traitement local, l’action Telegram et l’export CSV.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Architecture et contrôle des données</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Données principales locales</h3><p>Les données opérationnelles principales et le journal restent dans l’application locale.</p></div>
-        <div class="card"><h3>Données serveur minimales</h3><p>Le serveur conserve seulement le nécessaire pour livrer et synchroniser les demandes.</p></div>
-        <div class="card"><h3>Adaptateur Telegram</h3><p>Telegram sert aux notifications et actions autorisées; ce n’est pas la base de données.</p></div>
-        <div class="card"><h3>Visibilité hors ligne</h3><p>L’application locale doit afficher l’état de connexion, la dernière synchronisation réussie et la file en attente.</p></div>
-        <div class="card"><h3>Reprise après coupure</h3><p>Les statuts et actions en attente peuvent reprendre après le retour de la connexion.</p></div>
-        <div class="card"><h3>Modules plus tard</h3><p>De nouveaux modules peuvent être ajoutés sans remplacer tout le moteur.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <div class="grid2 mt-14">
-          <div class="card"><h2>Limites</h2><p>Cette page ne promet pas comptabilité, paie, paiements en ligne, planification avancée, analyses, IA, applications mobiles, affectation automatique, API, webhooks, CRM complet ou prix et délais fixes.</p></div>
-          <div class="card"><h2>Prix après analyse du flux</h2><p>Le périmètre et le prix sont définis après examen du flux actuel, du site existant, des modules nécessaires et des conditions d’installation.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Demander une démonstration</a></div></div>
-        </div>
-      </div>
-    </section>
+    <section><div class="c"><div class="card hero-card"><h1 class="hero-title">VVZ ERP Suite pour entreprises locales et services de proximité</h1><p class="lead">Un client appelle, un autre écrit sur WhatsApp, une demande arrive par le site et quelqu’un attend encore une réponse promise la veille. Quand les demandes passent par plusieurs canaux, le dirigeant ou la personne qui répond devient vite le seul endroit où tout se rejoint. Le problème n’est pas le téléphone, la messagerie ou Excel : c’est que trop de choses dépendent de la mémoire d’une seule personne.</p><figure class="sectorVisual"><img src="img/services/local-business.png" width="1672" height="941" alt="Visuel VVZ ERP Suite pour les entreprises locales" decoding="async"><figcaption class="sectorVisual__caption"><strong>Votre façon de travailler reste la base</strong><span>Nous partons de votre fonctionnement réel : demandes clients, tâches à réaliser, personnes responsables, statuts, rappels, messages et suivi.</span></figcaption></figure><div class="hero-badges"><span class="tag">Demande client</span><span class="tag">Équipe</span><span class="tag">Application locale</span><span class="tag">Telegram</span></div><div class="formActions mt-14"><a href="/#work">Voir le flux système</a></div></div></div></section>
+    <section><div class="c"><h2>Le vrai problème : l’entreprise dépend trop de la mémoire de quelqu’un</h2><p class="lead">Dans une petite entreprise, une même personne peut répondre aux clients, organiser le travail, transmettre les informations et vérifier ce qui reste à faire. Tant que le volume reste faible, cela fonctionne. Dès que plusieurs demandes arrivent en même temps, il devient facile d’oublier un rappel, une promesse ou une prochaine action.</p><div class="grid2 mt-14"><div class="card"><h3>Avant</h3><p>Une demande est dans un appel, une autre dans un message, une tâche dans Excel et un rappel reste simplement dans la mémoire de la personne qui a parlé au client.</p></div><div class="card"><h3>Après</h3><p>Chaque demande peut regrouper le client, son besoin, la personne responsable, la prochaine action, le statut et l’historique.</p></div></div></div></section>
+    <section><div class="c"><h2>Les situations typiques d’une entreprise locale</h2><div class="grid3 mt-14"><div class="card"><h3>Nouvelle demande</h3><p>Un client demande un service, un prix, une disponibilité ou une information et la demande est enregistrée au lieu de rester uniquement dans le canal où elle est arrivée.</p></div><div class="card"><h3>Réponse à préparer</h3><p>Une demande qui nécessite un rappel, un devis ou une vérification peut rester visible avec la prochaine action à effectuer.</p></div><div class="card"><h3>Tâche à attribuer</h3><p>Lorsqu’une autre personne doit agir, la demande peut montrer clairement qui en est responsable.</p></div><div class="card"><h3>Demande en attente</h3><p>Si une réponse du client, une décision, une disponibilité ou une autre information est encore nécessaire, le statut peut montrer pourquoi la demande n’avance pas encore.</p></div></div></div></section>
+    <section><div class="c"><h2>Un parcours simple, de la demande au travail terminé</h2><div class="grid3 mt-14"><div class="card"><h3>Demande reçue</h3><p>Le besoin du client est enregistré avec les informations utiles.</p></div><div class="card"><h3>À traiter</h3><p>La demande reste visible tant qu’une réponse ou une action est encore nécessaire.</p></div><div class="card"><h3>Attribuée</h3><p>Elle peut être confiée à la personne qui doit répondre ou réaliser le travail.</p></div><div class="card"><h3>En cours</h3><p>L’équipe voit que la demande est prise en charge et peut ajouter les informations importantes au fur et à mesure.</p></div><div class="card"><h3>En attente</h3><p>Si quelque chose bloque la suite, le statut peut indiquer clairement ce qui est encore attendu.</p></div><div class="card"><h3>Terminée et historique</h3><p>Une fois le travail terminé, le statut change mais les informations et les actions réalisées restent disponibles dans l’historique.</p></div></div><div class="note"><h3>Moins de clients obligés de rappeler pour savoir où en est leur demande</h3><p>Selon la configuration choisie, le client peut recevoir une confirmation lorsque sa demande est enregistrée ou une information lorsque son statut change. L’équipe évite ainsi une partie des échanges répétitifs sans perdre le contrôle de la relation client.</p></div></div></section>
+    <section><div class="c"><h2>L’entreprise garde ses repères</h2><div class="grid3 mt-14"><div class="card"><h3>Vos outils actuels peuvent rester en place</h3><p>Si votre téléphone, votre messagerie, votre site, votre agenda ou un autre outil fonctionne déjà bien, il n’est pas nécessaire de tout remplacer. VVZ ERP Suite peut surtout relier les informations et les actions qui restent aujourd’hui dispersées.</p></div><div class="card"><h3>Excel peut rester dans le flux</h3><p>Si vous utilisez déjà un tableau pour suivre les clients, les tâches, les dates ou les statuts, il peut rester une référence. Le journal peut reprendre les informations réellement utiles à votre activité.</p></div><div class="card"><h3>Un export utilisable dans Excel</h3><p>Les données utiles peuvent être exportées dans un fichier CSV compatible avec Excel, avec une structure adaptée à vos colonnes de travail.</p></div></div></div></section>
+    <section><div class="c"><h2>L’information reste accessible là où l’équipe travaille</h2><div class="grid3 mt-14"><div class="card"><h3>L’outil local</h3><p>L’entreprise peut utiliser un outil local pour retrouver les demandes, tâches, responsables, statuts, rappels et notes.</p></div><div class="card"><h3>Le serveur</h3><p>Le serveur intervient uniquement pour les fonctions qui en ont besoin, par exemple recevoir une demande depuis le site ou synchroniser certaines informations.</p></div><div class="card"><h3>Telegram</h3><p>Telegram peut simplement prévenir les personnes autorisées lorsqu’une nouvelle demande arrive ou lorsqu’une action importante doit être vue rapidement. Le suivi principal reste dans l’outil.</p></div></div><div class="grid2 mt-14"><div class="card"><h3>Responsabilité visible</h3><p>Chaque demande peut montrer qui doit répondre, qui doit agir, ce qui est encore attendu et ce qui a déjà été fait.</p></div><div class="card"><h3>Adapté à votre entreprise</h3><p>VVZ Studio adapte les informations, les étapes et les rôles à votre façon de travailler au lieu de vous imposer un fonctionnement rigide.</p></div></div></div></section>
+    <section><div class="c"><h2>Questions fréquentes</h2><div class="grid3 mt-14"><div class="card"><h3>Faut-il remplacer nos outils actuels ?</h3><p>Non. Les outils qui fonctionnent bien peuvent rester en place. L’objectif est surtout d’éviter que les informations importantes soient dispersées entre plusieurs canaux et dépendent uniquement de la mémoire.</p></div><div class="card"><h3>Est-ce un CRM obligatoire pour toute l’entreprise ?</h3><p>Non. Le périmètre dépend de votre besoin. La solution peut rester simple et se limiter au suivi des demandes, tâches, responsables, statuts et informations utiles.</p></div><div class="card"><h3>Faut-il abandonner Excel ?</h3><p>Non. Les tableaux existants peuvent rester une référence et les données utiles peuvent être exportées en CSV compatible avec Excel.</p></div></div></div></section>
+    <section><div class="c"><div class="card"><h2>Démonstration vidéo prochainement</h2><p>Une courte démonstration montrera comment une demande, une attribution, une action en attente et un changement de statut peuvent être suivis dans le système.</p></div></div></section>
+    <section><div class="c"><div class="grid2 mt-14"><div class="card"><h2>Un périmètre défini clairement</h2><p>Les fonctions, les accès, les informations suivies et les éventuelles intégrations sont définis avec l’entreprise avant la mise en place.</p></div><div class="card"><h2>Un prix basé sur votre fonctionnement réel</h2><p>Le prix dépend de votre organisation actuelle, des outils déjà utilisés, du nombre d’étapes à suivre et des fonctions dont votre entreprise a réellement besoin. L’objectif n’est pas de vous vendre des modules inutiles.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Parler de votre projet</a></div></div></div><p class="note mt-14"><a href="/">Découvrez aussi l’ensemble des options et intégrations de VVZ Studio.</a></p></div></section>
   </main>
+  <footer class="c" style="padding:18px 20px;color:gray">
+    <p>© <span id="y">2026</span> VVZ Studio · VVZ ERP Suite et autres solutions logicielles pour les entreprises locales.</p>
+    <p>Contact : <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Assistance : <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
+  </footer>
 <script src="/js/bot-link.js?v=d75b92d3" defer></script>
+<script src="/js/script.js?v=151c572" defer></script>
 </body>
 </html>

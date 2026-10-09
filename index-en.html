@@ -60,43 +60,49 @@
 <body id="top" class="theme-dark">
 
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="#top">
-        <img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async">
-      </a>
-
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="#work">VVZ ERP Suite</a>
-        <a href="#services">Solutions</a>
-        <a href="#process">How we work</a>
-        <a href="#trust">ERP reliability</a>
-        <a href="#services-seo">Sector solutions</a>
-        <a href="#pricing">Project pricing</a>
-        <a href="/demonstration-en.html">Demonstration</a>
-        <a href="/blog/">Blog</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="navRight">
-        <div class="langMenu" aria-label="Language">
-          <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
-                stroke-width="1.8" />
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-              <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
-                stroke-width="1.8" />
-            </svg>
-          </button>
-          <div class="langDropdown" role="menu">
-            <a href="/index-en.html" role="menuitem">English.<span class="langTag">EN</span></a>
-            <a href="/" role="menuitem">Français.<span class="langTag">FR</span></a>
-            <a href="/index-ru.html" role="menuitem">Russian.<span class="langTag">RU</span></a>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async">
+        </a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Language">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/index-en.html" data-language="en" role="menuitem">English.<span class="langTag">EN</span></a>
+              <a href="/" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/index-ru.html" data-language="ru" role="menuitem">Russian.<span class="langTag">RU</span></a>
+            </div>
           </div>
         </div>
-        <a class="btn btnP navCta" href="#contact">
-          Request a demonstration
-        </a>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="#work">VVZ ERP Suite</a>
+          <a href="#services">Solutions</a>
+          <a href="#process">How we work</a>
+          <a href="#trust">ERP reliability</a>
+          <a href="#services-seo">Sector solutions</a>
+          <a href="#pricing">Project pricing</a>
+          <a href="/demonstration-en.html">Demonstration</a>
+          <a href="/blog/">Blog</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="navRight">
+          <a class="btn btnP navCta" href="#contact">
+            Discuss your project
+          </a>
+        </div>
+      </div>
       </div>
     </div>
   </header>
@@ -107,10 +113,10 @@
         <h1 class="hero-title">We develop business software systems and automation solutions</h1>
         <p class="lead">We design and build solutions around real business processes: VVZ ERP Suite, websites, Telegram bots, Python/backend systems, API integrations and automation.</p>
 
-        <div class="proof-row" aria-label="Proof">
-          <div class="proof"><span class="dot" aria-hidden="true"></span> From process analysis to a working solution.</div>
-          <div class="proof"><span class="dot" aria-hidden="true"></span> Website, backend, API and Telegram as one connected system.</div>
-          <div class="proof"><span class="dot" aria-hidden="true"></span> Architecture and modules shaped around your business needs.</div>
+        <div class="proof-row hero-semantic-grid" style="display:grid;grid-template-columns:minmax(0,max-content);justify-content:center;max-width:100%;" aria-label="Proof">
+          <a class="btn" style="width:100%;" href="#process">From process analysis to a working solution.</a>
+          <a class="btn" style="width:100%;" href="#work">Website, backend, API and Telegram as one connected system.</a>
+          <a class="btn" style="width:100%;" href="#trust">Architecture and modules shaped around your business needs.</a>
         </div>
 
         <div class="heroMedia">
@@ -127,26 +133,9 @@
         <p class="lead">Integration with your existing website or a solution developed around your processes.</p>
 
         <div class="formActions mt-14">
-          <a class="btn btnP navCta" href="#services">Our solutions</a>
-          <a class="btn" href="#contact">Discuss your project</a>
+          <a href="#services">Our solutions</a>
         </div>
 
-        <div class="cta-row mt-12">
-          <a class="btn" href="https://t.me/vvz_ai_bot" target="_blank" rel="noopener">
-            <svg class="cta-ic" aria-hidden="true">
-              <use href="#i-telegram"></use>
-            </svg>Telegram</a>
-          <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener">
-            <svg class="cta-ic" aria-hidden="true">
-              <use href="#i-whatsapp"></use>
-            </svg>WhatsApp</a>
-          <a class="btn" href="mailto:contact@vvzstudio.com">
-            <svg class="cta-ic" aria-hidden="true">
-              <use href="#i-email"></use>
-            </svg>Email</a>
-        </div>
-
-        <p class="note">Direct contact is available through Telegram, WhatsApp or email.</p>
       </div>
     </div>
   </section>
@@ -212,12 +201,14 @@
       <h2>VVZ ERP Suite sector solutions</h2>
       <p class="lead">Each sector uses the same VVZ ERP Suite engine with its own services, statuses and working rules.</p>
       <div class="grid3 mt-14">
-        <div class="card"><h3>Garages and auto repair.</h3><p>Requests for diagnostics, repair or booking move into the local journal with confirmation and completion statuses.</p><div class="formActions mt-12"><a class="btn btnP" href="auto-service-website.html">Open sector page</a></div></div>
-        <div class="card"><h3>Cleaning and home services.</h3><p>Apartment, house, office, post-renovation, window and rental-turnover requests can move through the same local workflow.</p><div class="formActions mt-12"><a class="btn btnP" href="cleaning-service-system.html">Open sector page</a></div></div>
-        <div class="card"><h3>Tire shops and mobile tire service.</h3><p>Seasonal requests, storage notes and mobile service details can be handled through the same workflow.</p><div class="formActions mt-12"><a class="btn btnP" href="tire-shop-website.html">Open sector page</a></div></div>
-        <div class="card"><h3>Hair and beauty.</h3><p>Appointment requests and service choices can be configured with the statuses the salon actually uses.</p><div class="formActions mt-12"><a class="btn btnP" href="beauty-business-system.html">Open sector page</a></div></div>
-        <div class="card"><h3>Construction, repair and mobile craftsmen.</h3><p>On-site requests, comments and follow-up statuses can be adapted for mobile work.</p><div class="formActions mt-12"><a class="btn btnP" href="construction-mobile-business-system.html">Open sector page</a></div></div>
-        <div class="card"><h3>Other local businesses.</h3><p>Small shops, workshops, associations and service businesses can start with the modules they need now.</p><div class="formActions mt-12"><a class="btn btnP" href="local-business-website.html">Open sector page</a><a class="btn" href="#contact">Check fit</a></div></div>
+        <div class="card"><h3>Garages and auto repair.</h3><p>Missed calls, diagnostics, vehicles and parts end up in scattered messages, so the team loses time rebuilding each request. <a href="auto-service-website.html">Learn more →</a></p></div>
+        <div class="card"><h3>Cleaning and home services.</h3><p>Several addresses, teams and last-minute changes make jobs difficult to follow without one shared view. <a href="cleaning-service-system.html">Learn more →</a></p></div>
+        <div class="card"><h3>Tire shops and mobile tire service.</h3><p>Seasonal demand, dimensions, availability, appointments and fitting need to stay consistent from the first message to completion. <a href="tire-shop-website.html">Learn more →</a></p></div>
+        <div class="card"><h3>Hair and beauty.</h3><p>Appointments, service changes, staff coordination and missed messages quickly complicate salon follow-up. <a href="beauty-business-system.html">Learn more →</a></p></div>
+        <div class="card"><h3>Construction, repair and mobile craftsmen.</h3><p>Multiple sites, crews, materials and client changes require a clear view of the next action. <a href="construction-mobile-business-system.html">Learn more →</a></p></div>
+        <div class="card"><h3>Private dental clinics.</h3><p>Appointments, cancellations and administrative follow-up become scattered between reception, calls and messages. <a href="dental-clinic.html">Learn more →</a></p></div>
+        <div class="card"><h3>Farming businesses.</h3><p>Seasonal tasks, resources, equipment and field information change quickly and are easily scattered. <a href="farming-business.html">Learn more →</a></p></div>
+        <div class="card"><h3>Other local businesses.</h3><p>Requests arrive through several channels, and the business relies too much on the owner’s memory to recover every task. <a href="local-business-website.html">Learn more →</a></p></div>
       </div>
     </div>
   </section>
@@ -227,9 +218,9 @@
       <h2>Project pricing</h2>
       <p class="lead">You can order a website, Telegram bot, VVZ ERP Suite, backend/API or business automation separately, or combine several components into one system. The prices below are starting guidelines; the final quote is confirmed after the requirements are defined.</p>
       <div class="grid3 mt-14">
-        <div class="card"><h3>Separate services.</h3><p><strong>Website — from €390.</strong> From a simple 3–5-page site to professional and complex projects around €2,500+ and then quoted to scope. The price depends on page count, design, languages, forms, features, content and integrations.</p><p>A project at the level of the current VVZ Studio site — multilingual, responsive, content-rich, with custom design, SEO structure and forms, without separate specific backend development — is indicative of the €2,500 level.</p><p><strong>Telegram bot — from €290.</strong> <strong>Form on an existing website — from €120.</strong> Complex CMS, CRM, API or legacy environments are priced after technical assessment.</p><p><strong>Python / Backend / API — from €290.</strong> <strong>Business automation — from €190.</strong> Priced according to the project and quoted to scope.</p><div class="formActions mt-12"><a class="btn" href="#contact">Describe the need</a></div></div>
-        <div class="card"><h3>VVZ ERP Suite and complete solution.</h3><p><strong>VVZ ERP Suite — from €490</strong> for a basic configuration with 1 user: request intake, server-side processing, Telegram workflow notifications, working statuses, a local journal and manual CSV export. The price grows with the number of users, required modules, integrations, automation and business processes.</p><p>The separate minimums Website €390 + VVZ ERP Suite €490 + standalone Telegram bot €290 total €1,170. The <strong>Complete VVZ Solution</strong>, designed from the start as one Website + ERP + Telegram workflow system, starts from <strong>€990</strong>.</p><p>This is not an artificial discount on a separate bot: the Telegram workflow is part of the shared architecture, so three independent products do not have to be built and connected afterward. Our solutions can also connect to an existing website.</p><div class="formActions mt-12"><a class="btn" href="#contact">Discuss the scope</a></div></div>
-        <div class="card"><h3>Maintenance, hosting and conditions.</h3><p><strong>Standard website — from €19.90/month.</strong> For larger websites or server components: <strong>from €29.90/month</strong>. For ERP or a complete system, a dedicated server environment for the client is used; the corresponding service includes hosting, HTTPS, backups, monitoring and basic technical support from <strong>€39.90/month</strong>. The domain remains the client’s property.</p><p>With maintenance and dedicated infrastructure for at least 12 months, initial deployment of the complete package can start from <strong>€890</strong>, plus service from <strong>€39.90/month</strong>. This favourable initial price is tied to annual maintenance, not simply to buying several services together.</p><p>All prices are indicative. Requirements and the quote are confirmed before work begins; requests outside the agreed scope are priced separately. Migration to the client’s own server is a separate paid service: after the minimum maintenance term, the standard rate applies; before the minimum 12-month term ends, a higher early-migration rate applies.</p><p>After migration and a successful operational check, the client’s data is deleted from VVZ Studio infrastructure; residual backups are deleted according to the defined retention period.</p><div class="formActions mt-12"><a class="btn" href="#contact">Request a quote</a></div></div>
+        <div class="card"><h3>Separate services.</h3><p><strong>Website — from €390.</strong> From a simple 3–5-page site to professional and complex projects around €2,500+ and then quoted to scope. The price depends on page count, design, languages, forms, features, content and integrations.</p><p>A project at the level of the current VVZ Studio site — multilingual, responsive, content-rich, with custom design, SEO structure and forms, without separate specific backend development — is indicative of the €2,500 level.</p><p><strong>Telegram bot — from €290.</strong> <strong>Form on an existing website — from €120.</strong> Complex CMS, CRM, API or legacy environments are priced after technical assessment.</p><p><strong>Python / Backend / API — from €290.</strong> <strong>Business automation — from €190.</strong> Priced according to the project and quoted to scope.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="Website or web solution" data-pricing-message="I would like to discuss separate services: website, Telegram bot, Python/backend or automation.">Describe the need</a></div></div>
+        <div class="card"><h3>VVZ ERP Suite and complete solution.</h3><p><strong>VVZ ERP Suite — from €490</strong> for a basic configuration with 1 user: request intake, server-side processing, Telegram workflow notifications, working statuses, a local journal and manual CSV export. The price grows with the number of users, required modules, integrations, automation and business processes.</p><p>The separate minimums Website €390 + VVZ ERP Suite €490 + standalone Telegram bot €290 total €1,170. The <strong>Complete VVZ Solution</strong>, designed from the start as one Website + ERP + Telegram workflow system, starts from <strong>€990</strong>.</p><p>This is not an artificial discount on a separate bot: the Telegram workflow is part of the shared architecture, so three independent products do not have to be built and connected afterward. Our solutions can also connect to an existing website.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="VVZ ERP Suite" data-pricing-message="I would like to discuss VVZ ERP Suite and the complete solution.">Discuss the scope</a></div></div>
+        <div class="card"><h3>Maintenance, hosting and conditions.</h3><p><strong>Standard website — from €19.90/month.</strong> For larger websites or server components: <strong>from €29.90/month</strong>. For ERP or a complete system, a dedicated server environment for the client is used; the corresponding service includes hosting, HTTPS, backups, monitoring and basic technical support from <strong>€39.90/month</strong>. The domain remains the client’s property.</p><p>With maintenance and dedicated infrastructure for at least 12 months, initial deployment of the complete package can start from <strong>€890</strong>, plus service from <strong>€39.90/month</strong>. This favourable initial price is tied to annual maintenance, not simply to buying several services together.</p><p>All prices are indicative. Requirements and the quote are confirmed before work begins; requests outside the agreed scope are priced separately. Migration to the client’s own server is a separate paid service: after the minimum maintenance term, the standard rate applies; before the minimum 12-month term ends, a higher early-migration rate applies.</p><p>After migration and a successful operational check, the client’s data is deleted from VVZ Studio infrastructure; residual backups are deleted according to the defined retention period.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="Website or web solution" data-pricing-message="I would like to discuss maintenance, hosting and conditions.">Request a quote</a></div></div>
       </div>
     </div>
   </section>
@@ -283,13 +274,13 @@
           <h3>Discuss your need</h3>
           <p>Tell us what should be developed or automated: VVZ ERP Suite, a website, Telegram bot, backend/API or a specific business workflow.</p>
           <div class="ctaList">
-            <a class="btn" href="https://t.me/vvz_ai_bot" target="_blank"><svg class="cta-ic">
+            <a class="contact-link" href="https://t.me/vvz_ai_bot" target="_blank"><svg class="cta-ic">
                 <use href="#i-telegram"></use>
               </svg> Telegram</a>
-            <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener"><svg class="cta-ic">
+            <a class="contact-link" href="https://wa.me/33605997424" target="_blank" rel="noopener"><svg class="cta-ic">
                 <use href="#i-whatsapp"></use>
               </svg> WhatsApp</a>
-            <a class="btn" href="mailto:contact@vvzstudio.com"><svg class="cta-ic">
+            <a class="contact-link" href="mailto:contact@vvzstudio.com"><svg class="cta-ic">
                 <use href="#i-email"></use>
               </svg> Email</a>
           </div>
@@ -350,6 +341,25 @@
         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5.3-8-5.3V6l8 5 8-5v2.2z" />
     </symbol>
   </svg>
+
+  <script>
+    (() => {
+      const form = document.getElementById("quoteForm");
+      const project = form && form.querySelector('[name="project"]');
+      const message = form && form.querySelector('[name="message"]');
+      if (!project || !message) return;
+
+      document.querySelectorAll("[data-pricing-project]").forEach((link) => {
+        link.addEventListener("click", () => {
+          const option = Array.from(project.options).find(
+            (item) => item.textContent.trim() === link.dataset.pricingProject
+          );
+          if (option) project.value = option.value;
+          message.value = link.dataset.pricingMessage || "";
+        });
+      });
+    })();
+  </script>
 
   <script src="/js/bot-link.js?v=d75b92d3" defer></script>
 

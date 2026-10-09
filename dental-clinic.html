@@ -33,110 +33,61 @@
 
 <body id="top" class="theme-dark">
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="/index-en.html"><img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async"></a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="/index-en.html#work">How it works.</a>
-        <a href="/index-en.html#services">Solutions.</a>
-        <a href="/index-en.html#process">Implementation.</a>
-        <a href="/index-en.html#services-seo">Sectors.</a>
-        <a href="/index-en.html#pricing">Pricing.</a>
-        <a href="/index-en.html#faq">FAQ.</a>
-        <a href="/index-en.html#contact">Request a demonstration.</a>
-      </nav>
-      <div class="navRight"><a class="btn btnP navCta" href="/index-en.html#contact">Request a demonstration</a></div>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="/index-en.html"><img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async"></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Language">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/dental-clinic.html" data-language="en" role="menuitem">English.<span class="langTag">EN</span></a>
+              <a href="/dental-clinic-fr.html" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/dental-clinic-ru.html" data-language="ru" role="menuitem">Russian.<span class="langTag">RU</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="/index-en.html#work">How it works.</a>
+          <a href="/index-en.html#services">Solutions.</a>
+          <a href="/index-en.html#process">Implementation.</a>
+          <a href="/index-en.html#services-seo">Sectors.</a>
+          <a href="/index-en.html#pricing">Pricing.</a>
+          <a href="/index-en.html#faq">FAQ.</a>
+          <a href="/blog/">Blog.</a>
+        </nav>
+        <div class="navRight"><a class="btn btnP navCta" href="/index-en.html#contact">Discuss your project</a></div>
+      </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="c">
-        <div class="card hero-card">
-          <h1 class="hero-title">VVZ ERP Suite for dental clinic administration.</h1>
-          <p class="lead">A lightweight local workflow for dental practices that need to receive website enquiries, appointment requests, confirmations and cancellations without handling clinical data.</p>
-          <figure class="sectorVisual">
-            <img src="img/services/dental-clinic.png" width="1672" height="941" alt="VVZ ERP Suite visual for administrative dental practice request workflow" decoding="async">
-            <figcaption class="sectorVisual__caption">
-              <strong>Administrative workflow for dental practices</strong>
-              <span>Website enquiries, appointment requests and simple status tracking in one local workflow.</span>
-            </figcaption>
-          </figure>
-          <div class="hero-badges"><span class="tag">Website enquiries</span>
-        <span class="tag">Appointment requests</span>
-        <span class="tag">Local application</span>
-        <span class="tag">Notifications</span>
-        </div>
-          <div class="formActions mt-14"><a class="btn btnP" href="/index-en.html#contact">Request a demonstration</a><a class="btn" href="/index-en.html#work">See system workflow</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Typical administrative requests</h2>
-        <p class="lead">The configuration is adjusted to the practice’s public request forms, reception workflow and administrative follow-up rules.</p>
-        <div class="grid3 mt-14"><div class="card"><h3>Website enquiries</h3><p>The request can include the visitor’s contact details, the selected administrative request type, preferred contact method and comments for reception follow-up.</p></div>
-        <div class="card"><h3>Appointment requests</h3><p>The request can capture a preferred date or time window, contact details and non-clinical notes needed for scheduling.</p></div>
-        <div class="card"><h3>Confirmation and cancellation</h3><p>The practice can confirm an appointment request, cancel it or keep it in a simple administrative status for later follow-up.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Workflow from request to journal</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>1) Website form</h3><p>The visitor sends an enquiry or appointment request with administrative information only.</p></div>
-        <div class="card"><h3>2) Server delivery queue</h3><p>The server validates the request and places it in the queue for delivery to the dental practice.</p></div>
-        <div class="card"><h3>3) Local application</h3><p>The local application receives the request and stores the administrative working record.</p></div>
-        <div class="card"><h3>4) Notification</h3><p>The authorized person receives a notification and can confirm or cancel the administrative request when enabled.</p></div>
-        <div class="card"><h3>5) Status tracking</h3><p>Requests use simple operational statuses such as new, confirmed, completed and cancelled.</p></div>
-        <div class="card"><h3>6) Journal and CSV</h3><p>The local work journal keeps the administrative record, and data can be exported manually to CSV.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Delivery options</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Integration into an existing website</h3><p>Connect enquiry and appointment request intake to the current practice website after reviewing safe integration options.</p></div>
-        <div class="card"><h3>Complete turnkey delivery</h3><p>Prepare the website, server, local application, notification connection and selected administrative workflow modules.</p></div>
-        <div class="card"><h3>Specific module</h3><p>Configure or extend a module when the standard engine needs a practice-specific administrative addition.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Implementation stages</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Workflow assessment</h3><p>Review the real enquiry forms, appointment request rules, statuses and installation conditions.</p></div>
-        <div class="card"><h3>Engine configuration</h3><p>Configure the ready engine, dictionaries, modules and administrative working rules.</p></div>
-        <div class="card"><h3>Full-chain test</h3><p>Test the request path from website form to local processing, notification action and CSV export.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Architecture and data control</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Local administrative data</h3><p>Administrative request records and the work journal stay in the local application.</p></div>
-        <div class="card"><h3>Minimum server data</h3><p>The server stores only what is needed for request delivery and synchronization.</p></div>
-        <div class="card"><h3>Notification adapter</h3><p>The notification channel is an authorized-action adapter, not the database.</p></div>
-        <div class="card"><h3>Offline visibility</h3><p>The local application must show connection state, last successful synchronization and pending queue.</p></div>
-        <div class="card"><h3>Recovery behavior</h3><p>Pending status updates and actions can resume after the connection returns.</p></div>
-        <div class="card"><h3>Modules later</h3><p>New administrative modules can be added later without replacing the whole engine.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <div class="grid2 mt-14">
-          <div class="card"><h2>Boundaries</h2><p>This page describes administrative request handling for dental practices only. It does not claim diagnosis, medical advice, treatment automation, patient record storage, medical history storage, certified medical software, regulatory or healthcare compliance, sensitive medical data processing, clinical decision support, medical equipment integration, online payments or fixed prices and deadlines.</p></div>
-          <div class="card"><h2>Pricing after workflow assessment</h2><p>Scope and price are determined after reviewing the current website, administrative request workflow, required modules and installation conditions.</p><div class="formActions mt-12"><a class="btn btnP" href="/index-en.html#contact">Request a demonstration</a></div></div>
-        </div>
-      </div>
-    </section>
+    <section><div class="c"><div class="card hero-card"><h1 class="hero-title">VVZ ERP Suite for dental practices and private clinics</h1><p class="lead">While a practitioner is seeing a patient, the phone keeps ringing: one person wants an appointment, another wants to move their slot, a third cancels and someone else is still waiting for confirmation. When these requests remain split between calls, messages, the schedule and reception’s memory, it becomes easy to forget a callback or lose track of an exchange.</p><figure class="sectorVisual"><img src="img/services/dental-clinic.png" width="1672" height="941" alt="VVZ ERP Suite visual for dental practice administration" decoding="async"><figcaption class="sectorVisual__caption"><strong>Your current organization remains the foundation</strong><span>We start from your current administrative workflow: appointment requests, availability, confirmations, changes, responsible people and exchange follow-up.</span></figcaption></figure><div class="hero-badges"><span class="tag">Customer request</span><span class="tag">Team</span><span class="tag">Local application</span><span class="tag">Telegram</span></div><div class="formActions mt-14"><a href="/index-en.html#work">See system workflow</a></div></div></div></section>
+    <section><div class="c"><h2>The real problem: reception must track several requests at once</h2><p class="lead">An appointment request is not always settled in one call. Someone may need to call back, offer another slot, wait for confirmation or record a cancellation. If each step remains in a different channel, the history must be rebuilt before anyone knows what is still to be done.</p><div class="grid2 mt-14"><div class="card"><h3>Before</h3><p>The appointment is in the schedule, the change request is in a message, a callback is on a note, and some confirmations simply depend on the memory of the person who answered.</p></div><div class="card"><h3>After</h3><p>Each administrative request can bring together the contact, appointment request, requested date, responsible person, status and history of exchanges.</p></div></div></div></section>
+    <section><div class="c"><h2>Typical administrative situations in a practice</h2><div class="grid3 mt-14"><div class="card"><h3>New appointment request</h3><p>The request is recorded with useful contact details and the availability given by the person.</p></div><div class="card"><h3>Proposed time slot</h3><p>Reception can see that a reply or confirmation is still expected without searching for the earlier exchange.</p></div><div class="card"><h3>Rescheduling or cancellation</h3><p>When an appointment changes, the new information can be recorded with the request so the old conversation is no longer the only reference.</p></div><div class="card"><h3>Callback to make</h3><p>A request needing a callback can remain visible with the responsible person and the next action to take.</p></div></div></div></section>
+    <section><div class="c"><h2>A simple path from request to confirmation</h2><div class="grid3 mt-14"><div class="card"><h3>Request received</h3><p>A person asks for an appointment, a change or administrative information.</p></div><div class="card"><h3>Useful information</h3><p>Contact details, availability and the elements needed to handle the request administratively are recorded in one place.</p></div><div class="card"><h3>To be handled</h3><p>The request stays visible while someone at the practice still needs to reply or propose a solution.</p></div><div class="card"><h3>Awaiting confirmation</h3><p>Once a slot has been proposed, the status can show that a reply is still expected.</p></div><div class="card"><h3>Confirmed</h3><p>Once the appointment is confirmed, the team can clearly find the latest validated information.</p></div><div class="card"><h3>Changed or cancelled</h3><p>If the situation changes, the new information remains attached to the request and the history shows what happened.</p></div></div><div class="note"><h3>Fewer calls just to reconfirm an appointment</h3><p>Depending on the chosen configuration, an administrative confirmation or reminder can be sent automatically. Reception avoids some repetitive exchanges while keeping control of the follow-up.</p></div></div></section>
+    <section><div class="c"><h2>The practice keeps its familiar points of reference</h2><div class="grid3 mt-14"><div class="card"><h3>Your calendar can stay in place</h3><p>If your appointment system already works well, it does not need to be replaced. VVZ ERP Suite can mainly organize the requests, callbacks, changes and follow-up currently around that calendar.</p></div><div class="card"><h3>Excel can remain part of the workflow</h3><p>If you already use a table for some administrative information, it can remain a reference. The journal can include only the data genuinely useful to your organization.</p></div><div class="card"><h3>An export that works with Excel</h3><p>Useful administrative data can be exported as a CSV file compatible with Excel, with a structure adapted to your working columns.</p></div></div></div></section>
+    <section><div class="c"><h2>Information remains accessible where the team works</h2><div class="grid3 mt-14"><div class="card"><h3>The local tool</h3><p>The practice can use a local tool to find administrative requests, callbacks, responsible people, statuses and notes useful for follow-up.</p></div><div class="card"><h3>The server</h3><p>The server is involved only in functions that need it, for example receiving a request from the website or synchronizing administrative information.</p></div><div class="card"><h3>Telegram</h3><p>Telegram can simply notify authorized people when a new request arrives or when an administrative action needs to be seen quickly. The main follow-up remains in the tool.</p></div></div><div class="grid2 mt-14"><div class="card"><h3>Visible responsibility</h3><p>Each request can show who should reply, call back, propose a slot or handle a change.</p></div><div class="card"><h3>Adapted to the practice</h3><p>VVZ Studio adapts information, steps and roles to the practice’s administrative workflow instead of imposing a rigid process.</p></div></div></div></section>
+    <section><div class="c"><h2>Frequently asked questions</h2><div class="grid3 mt-14"><div class="card"><h3>Do we need to replace our current calendar?</h3><p>No. If it works well, it can stay in place. The goal is mainly to organize requests, changes, callbacks and confirmations around the calendar.</p></div><div class="card"><h3>Does the solution manage medical records?</h3><p>No. This solution is presented for the administrative follow-up of requests and appointments only. Medical records, diagnoses, treatment information and other clinical data are outside its scope.</p></div><div class="card"><h3>Do we need to stop using Excel?</h3><p>No. Existing administrative tables can remain a reference and useful data can be exported as a CSV compatible with Excel.</p></div></div></div></section>
+    <section><div class="c"><div class="card"><h2>Demonstration video coming soon</h2><p>A short demonstration will show how an appointment request, callback, confirmation, change and status change can be followed in the system.</p></div></div></section>
+    <section><div class="c"><div class="grid2 mt-14"><div class="card"><h2>A clearly defined scope</h2><p>Functions, access, tracked administrative information and any integrations are defined with the practice before setup. This scope does not include medical records or clinical information.</p></div><div class="card"><h2>Pricing based on your real way of working</h2><p>Price depends on your current administrative organization, the tools already used, the number of steps to follow and the functions your practice really needs. The aim is not to sell you unnecessary modules.</p><div class="formActions mt-12"><a class="btn btnP" href="/index-en.html#contact">Discuss your project</a></div></div></div><p class="note mt-14"><a href="/index-en.html">Discover all VVZ Studio options and integrations as well.</a></p></div></section>
   </main>
+  <footer class="c" style="padding:18px 20px;color:gray">
+    <p>© <span id="y">2026</span> VVZ Studio · VVZ ERP Suite and other software solutions for local businesses.</p>
+    <p>Contact: <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Support: <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
+  </footer>
 <script src="/js/bot-link.js?v=d75b92d3" defer></script>
+<script src="/js/script.js?v=151c572" defer></script>
 </body>
 </html>

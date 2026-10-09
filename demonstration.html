@@ -24,26 +24,34 @@
 </head>
 <body id="top">
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="/#top"><img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async"></a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="#flow">Scénario</a>
-        <a href="#steps">Étapes</a>
-        <a href="#result">Résultat</a>
-        <a href="/demonstration.html">Démonstration</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-      <div class="navRight">
-        <div class="langMenu" aria-label="Langue">
-          <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
-          <div class="langDropdown" role="menu">
-            <a href="/demonstration-en.html" role="menuitem">English.<span class="langTag">EN</span></a>
-            <a href="/demonstration.html" role="menuitem">Français.<span class="langTag">FR</span></a>
-            <a href="/demonstration-ru.html" role="menuitem">Русский.<span class="langTag">RU</span></a>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="/#top"><img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async"></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Langue">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
+            <div class="langDropdown" role="menu">
+              <a href="/demonstration-en.html" data-language="en" role="menuitem">English.<span class="langTag">EN</span></a>
+              <a href="/demonstration.html" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/demonstration-ru.html" data-language="ru" role="menuitem">Русский.<span class="langTag">RU</span></a>
+            </div>
           </div>
         </div>
-        <a class="btn btnP navCta" href="/#contact">Parler de votre flux</a>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="#flow">Scénario</a>
+          <a href="#steps">Étapes</a>
+          <a href="#result">Résultat</a>
+          <a href="/demonstration.html">Démonstration</a>
+          <a href="/blog/">Blog</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="navRight">
+          <a class="btn btnP navCta" href="/#contact">Parler de votre flux</a>
+        </div>
+      </div>
       </div>
     </div>
   </header>
@@ -61,13 +69,12 @@
             <div class="proof"><span class="dot" aria-hidden="true"></span>Un journal local.</div>
           </div>
           <div class="formActions mt-14">
-            <a class="btn btnP" href="#steps">Voir les étapes</a>
-            <a class="btn" href="/#contact">Parler de votre projet</a>
+            <a href="#steps">Voir les étapes</a>
           </div>
           <div class="cta-row mt-12">
-            <a class="btn" href="https://t.me/vvz_ai_bot" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn" href="mailto:contact@vvzstudio.com">E-mail</a>
+            <a class="contact-link" href="https://t.me/vvz_ai_bot" target="_blank" rel="noopener">Telegram</a>
+            <a class="contact-link" href="https://wa.me/33605997424" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="contact-link" href="mailto:contact@vvzstudio.com">E-mail</a>
           </div>
         </div>
         <div class="demo-flow__browser" aria-label="Formulaire de demande fictif">
@@ -178,7 +185,6 @@
       <div class="c">
         <h2>Adaptons ce flux à votre activité</h2>
         <p class="lead">Expliquez-nous d’où viennent vos demandes et quels statuts votre équipe utilise. La démonstration montre le principe ; le flux réel est défini séparément.</p>
-        <a class="btn btnP" href="/#contact">Accéder au contact VVZ Studio</a>
       </div>
     </section>
   </main>
@@ -187,5 +193,6 @@
     <p>© <span id="y">2026</span> VVZ Studio · Solutions modulaires pour entreprises locales.</p>
     <p>Contact : <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Assistance : <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
   </footer>
+<script src="/js/script.js?v=151c572" defer></script>
 </body>
 </html>

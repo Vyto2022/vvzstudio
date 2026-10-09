@@ -33,18 +33,42 @@
 
 <body id="top">
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async"></a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="/#work">Fonctionnement.</a>
-        <a href="/#services">Solutions.</a>
-        <a href="/#process">Mise en place.</a>
-        <a href="/#services-seo">Secteurs.</a>
-        <a href="/#pricing">Tarifs.</a>
-        <a href="/#faq">FAQ.</a>
-        <a href="/#contact">Demander une démonstration.</a>
-      </nav>
-      <div class="navRight"><a class="btn btnP navCta" href="/#contact">Demander une démonstration</a></div>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="/"><img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async"></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Langue">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Langue">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/cleaning-service-system.html" data-language="en" role="menuitem">Anglais.<span class="langTag">EN</span></a>
+              <a href="/cleaning-service-system-fr.html" data-language="fr" role="menuitem">Français.<span class="langTag">FR</span></a>
+              <a href="/cleaning-service-system-ru.html" data-language="ru" role="menuitem">Russe.<span class="langTag">RU</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="/#work">Fonctionnement.</a>
+          <a href="/#services">Solutions.</a>
+          <a href="/#process">Mise en place.</a>
+          <a href="/#services-seo">Secteurs.</a>
+          <a href="/#pricing">Tarifs.</a>
+          <a href="/#faq">FAQ.</a>
+          <a href="/blog/">Blog.</a>
+        </nav>
+        <div class="navRight"><a class="btn btnP navCta" href="/#contact">Parler de votre projet</a></div>
+      </div>
+      </div>
     </div>
   </header>
 
@@ -52,91 +76,115 @@
     <section>
       <div class="c">
         <div class="card hero-card">
-          <h1 class="hero-title">VVZ ERP Suite pour nettoyage et services à domicile.</h1>
-          <p class="lead">Un flux modulaire pour nettoyage d’appartements et maisons, bureaux, nettoyage après travaux, vitres, rotation de logements en location et services similaires sur site.</p>
+          <h1 class="hero-title">VVZ ERP Suite pour entreprises de nettoyage et services à domicile</h1>
+          <p class="lead">Quand plusieurs interventions sont prévues dans la même journée, une petite information oubliée peut suffire à désorganiser le travail : une adresse modifiée, une consigne d’accès, un client qui décale l’horaire, une équipe remplacée au dernier moment ou une instruction restée dans un message. Le problème n’est pas le téléphone, Excel ou la messagerie : c’est que les informations utiles sont dispersées entre plusieurs endroits et dépendent trop de la mémoire de chacun.</p>
           <figure class="sectorVisual">
-            <img src="img/services/cleaning-service.png" width="1672" height="941" alt="Visuel VVZ ERP Suite pour le flux de nettoyage et services à domicile" decoding="async">
+            <img src="img/services/cleaning-service.png" width="1672" height="941" alt="Visuel VVZ ERP Suite pour le flux de nettoyage" decoding="async">
             <figcaption class="sectorVisual__caption">
-              <strong>Automatisation pour le nettoyage et les services à domicile</strong>
-              <span>Demandes, adresses, planning et statuts d’intervention dans un seul flux local.</span>
+              <strong>Votre organisation actuelle reste la base</strong>
+              <span>Nous partons de votre façon de travailler aujourd’hui : demandes clients, adresses, équipes, consignes, interventions, changements et suivi.</span>
             </figcaption>
           </figure>
-          <div class="hero-badges"><span class="tag">Réception sur le site</span>
-        <span class="tag">File serveur</span>
+          <div class="hero-badges"><span class="tag">Demande client</span>
+        <span class="tag">Équipe</span>
         <span class="tag">Application locale</span>
-        <span class="tag">Statuts Telegram</span>
-        </div>
-          <div class="formActions mt-14"><a class="btn btnP" href="/#contact">Demander une démonstration</a><a class="btn" href="/#work">Voir le flux système</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="c">
-        <h2>Demandes typiques</h2>
-        <p class="lead">La configuration est adaptée aux services, formulaires, dictionnaires et règles de travail de l’entreprise.</p>
-        <div class="grid3 mt-14"><div class="card"><h3>Appartements et maisons</h3><p>La demande peut préciser le type de nettoyage, l’adresse, les coordonnées client, l’horaire souhaité et les consignes d’accès.</p></div>
-        <div class="card"><h3>Bureaux et locaux professionnels</h3><p>Pour un bureau ou un local, on peut indiquer la prestation, l’adresse, le contact sur place, l’horaire et les remarques utiles.</p></div>
-        <div class="card"><h3>Cas spécifiques</h3><p>Après travaux, pour les vitres ou une rotation locative, la demande peut préciser le lieu, le service et les commentaires du client.</p></div>
+        <span class="tag">Telegram</span></div>
+          <div class="formActions mt-14"><a href="/#work">Voir le flux système</a></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Du formulaire au journal local</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>1) Formulaire client</h3><p>Le client envoie la demande avec les informations nécessaires.</p></div>
-        <div class="card"><h3>2) File serveur</h3><p>Le serveur vérifie la demande et la place dans la file de livraison vers l’entreprise.</p></div>
-        <div class="card"><h3>3) Application locale</h3><p>L’application locale reçoit la demande et conserve la fiche de travail.</p></div>
-        <div class="card"><h3>4) Notification Telegram</h3><p>La personne autorisée reçoit une notification et peut confirmer, annuler ou marquer le travail terminé lorsque l’action est prévue.</p></div>
-        <div class="card"><h3>5) Suivi des statuts</h3><p>Les demandes utilisent les statuts de travail : nouvelle, confirmée, terminée et annulée.</p></div>
-        <div class="card"><h3>6) Journal et CSV</h3><p>Le journal local garde l’enregistrement opérationnel, avec export manuel possible en CSV.</p></div>
+        <h2>Le vrai problème : chaque intervention a ses propres détails</h2>
+        <p class="lead">Deux prestations de nettoyage peuvent sembler identiques, mais l’adresse, l’horaire, les accès, les consignes du client et la personne responsable peuvent être différents. Quand une information reste uniquement dans un appel ou un message, l’équipe doit la rechercher au moment où elle en a besoin.</p>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Avant</h3><p>Les adresses sont dans un tableau, les consignes dans une conversation, les changements dans un autre message et certaines informations restent dans la mémoire de la personne qui a parlé au client.</p></div>
+          <div class="card"><h3>Après</h3><p>Chaque demande peut regrouper le client, l’adresse, l’intervention prévue, les consignes utiles, la personne responsable, le statut et l’historique.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Options de livraison</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Intégration à un site existant</h3><p>Connexion de la réception des demandes et du serveur au site actuel après vérification des options sûres.</p></div>
-        <div class="card"><h3>Solution complète clé en main</h3><p>Préparation du site, du serveur, de l’application locale, de Telegram et des modules métier retenus.</p></div>
-        <div class="card"><h3>Module spécifique</h3><p>Configuration ou extension d’un module lorsque le moteur standard nécessite un ajout métier.</p></div>
+        <h2>Les demandes typiques d’une entreprise de nettoyage</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Adresse et intervention</h3><p>L’adresse, le type de prestation, la date prévue et les informations nécessaires sont conservés avec la demande.</p></div>
+        <div class="card"><h3>Consignes du client</h3><p>Les particularités utiles à l’intervention peuvent être notées au même endroit afin que l’équipe n’ait pas à rechercher un ancien message avant de commencer.</p></div>
+        <div class="card"><h3>Équipe et responsable</h3><p>La demande peut indiquer qui doit intervenir et qui doit prendre en charge une modification ou une question du client.</p></div>
+        <div class="card"><h3>Changement de dernière minute</h3><p>Si l’horaire, l’adresse, l’équipe ou une consigne change, l’information peut être mise à jour dans la demande au lieu de rester uniquement dans une conversation séparée.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>Un parcours simple, de la demande à l’intervention terminée</h2>
+        <div class="grid3 mt-14">
+          <div class="card"><h3>Demande client</h3><p>Le client demande une intervention, précise le lieu, le besoin et les informations importantes.</p></div>
+          <div class="card"><h3>Adresse et consignes</h3><p>L’adresse et les consignes utiles sont enregistrées avec la demande.</p></div>
+          <div class="card"><h3>Attribution</h3><p>La demande peut être attribuée à la personne ou à l’équipe qui doit intervenir.</p></div>
+          <div class="card"><h3>Planifiée</h3><p>La date prévue et les informations nécessaires restent visibles avant l’intervention.</p></div>
+          <div class="card"><h3>En cours</h3><p>L’équipe peut voir ce qui doit être réalisé et noter les informations utiles pendant le travail.</p></div>
+          <div class="card"><h3>Terminée et historique</h3><p>Une fois l’intervention terminée, le statut change et l’historique reste disponible pour retrouver ce qui avait été prévu et réalisé.</p></div>
+        </div>
+        <div class="note"><h3>Moins d’appels uniquement pour demander « l’intervention est-elle bien prévue ? »</h3><p>Selon la configuration choisie, le client peut recevoir une confirmation lorsque sa demande est enregistrée ou lorsqu’une intervention est confirmée. L’équipe évite ainsi une partie des appels de suivi et des échanges répétés.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <h2>L’entreprise garde ses repères</h2>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Excel peut rester dans le flux</h3><p>Si vous utilisez déjà un tableau pour suivre les clients, les adresses, les dates ou les équipes, cette organisation peut rester une référence. Le journal peut reprendre les informations réellement utiles à votre activité.</p></div>
+          <div class="card"><h3>Un export utilisable dans Excel</h3><p>Les données utiles peuvent être exportées dans un fichier CSV compatible avec Excel, avec une structure adaptée à vos colonnes de travail.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Étapes de mise en place</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Analyse du flux</h3><p>Analyse des services réels, données nécessaires, statuts et conditions d’installation.</p></div>
-        <div class="card"><h3>Configuration du moteur</h3><p>Configuration du moteur prêt, des dictionnaires, modules et règles métier.</p></div>
-        <div class="card"><h3>Test complet</h3><p>Test du parcours depuis le formulaire du site jusqu’au traitement local, l’action Telegram et l’export CSV.</p></div>
+        <h2>L’information reste accessible là où l’équipe travaille</h2>
+        <div class="grid3 mt-14">
+          <div class="card"><h3>L’outil local</h3><p>L’entreprise peut utiliser un outil local pour retrouver les demandes, adresses, interventions, responsables, statuts et notes.</p></div>
+          <div class="card"><h3>Le serveur</h3><p>Le serveur intervient uniquement pour les fonctions qui en ont besoin, par exemple recevoir une demande depuis le site ou synchroniser certaines informations.</p></div>
+          <div class="card"><h3>Telegram</h3><p>Telegram peut simplement prévenir les personnes autorisées lorsqu’une nouvelle demande arrive ou lorsqu’une modification importante doit être vue rapidement. Le suivi principal reste dans l’outil.</p></div>
+        </div>
+        <div class="grid2 mt-14">
+          <div class="card"><h3>Responsabilité visible</h3><p>Chaque demande peut indiquer qui doit intervenir, qui doit répondre au client et ce qui attend encore une action.</p></div>
+          <div class="card"><h3>Adapté à votre entreprise</h3><p>VVZ Studio adapte les informations, les étapes et les rôles à votre façon de travailler au lieu de vous imposer un fonctionnement rigide.</p></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="c">
-        <h2>Architecture et contrôle des données</h2>
-        <div class="grid3 mt-14"><div class="card"><h3>Données principales locales</h3><p>Les données opérationnelles principales et le journal restent dans l’application locale.</p></div>
-        <div class="card"><h3>Données serveur minimales</h3><p>Le serveur conserve seulement le nécessaire pour livrer et synchroniser les demandes.</p></div>
-        <div class="card"><h3>Adaptateur Telegram</h3><p>Telegram sert aux notifications et actions autorisées; ce n’est pas la base de données.</p></div>
-        <div class="card"><h3>Visibilité hors ligne</h3><p>L’application locale doit afficher l’état de connexion, la dernière synchronisation réussie et la file en attente.</p></div>
-        <div class="card"><h3>Reprise après coupure</h3><p>Les statuts et actions en attente peuvent reprendre après le retour de la connexion.</p></div>
-        <div class="card"><h3>Modules plus tard</h3><p>De nouveaux modules peuvent être ajoutés sans remplacer tout le moteur.</p></div>
-        </div>
+        <h2>Questions fréquentes</h2>
+        <div class="grid3 mt-14"><div class="card"><h3>Faut-il remplacer notre planning actuel ?</h3><p>Non. Si votre organisation actuelle fonctionne bien, elle peut rester en place. L’objectif est surtout d’éviter que les informations importantes soient séparées entre le planning, les messages, les tableaux et la mémoire de l’équipe.</p></div>
+        <div class="card"><h3>Peut-on gérer les changements de dernière minute ?</h3><p>Oui. Une modification d’adresse, d’horaire, de responsable ou de consigne peut être associée à la demande afin que l’équipe retrouve la dernière information utile au même endroit.</p></div>
+        <div class="card"><h3>Faut-il abandonner Excel ?</h3><p>Non. Les tableaux existants peuvent rester une référence et les données utiles peuvent être exportées en CSV compatible avec Excel.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="c">
+        <div class="card"><h2>Démonstration vidéo prochainement</h2><p>Une courte démonstration montrera comment une demande, une adresse, une attribution, un changement et un statut d’intervention peuvent être suivis dans le système.</p></div>
       </div>
     </section>
 
     <section>
       <div class="c">
         <div class="grid2 mt-14">
-          <div class="card"><h2>Limites</h2><p>Cette page ne promet pas comptabilité, paie, paiements en ligne, planification avancée, analyses, IA, applications mobiles, affectation automatique, API, webhooks, CRM complet ou prix et délais fixes.</p></div>
-          <div class="card"><h2>Prix après analyse du flux</h2><p>Le périmètre et le prix sont définis après examen du flux actuel, du site existant, des modules nécessaires et des conditions d’installation.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Demander une démonstration</a></div></div>
+          <div class="card"><h2>Un périmètre défini clairement</h2><p>Les fonctions, les accès, les informations suivies et les éventuelles intégrations sont définis avec l’entreprise avant la mise en place.</p></div>
+          <div class="card"><h2>Un prix basé sur votre fonctionnement réel</h2><p>Le prix dépend de votre organisation actuelle, du nombre d’étapes à suivre, des outils déjà utilisés et des fonctions dont votre entreprise a réellement besoin. L’objectif n’est pas de vous vendre des modules inutiles.</p><div class="formActions mt-12"><a class="btn btnP" href="/#contact">Parler de votre projet</a></div></div>
         </div>
+        <p class="note mt-14"><a href="/">Découvrez aussi l’ensemble des options et intégrations de VVZ Studio.</a></p>
       </div>
     </section>
   </main>
+  <footer class="c" style="padding:18px 20px;color:gray">
+    <p>© <span id="y">2026</span> VVZ Studio · VVZ ERP Suite et autres solutions logicielles pour les entreprises locales.</p>
+    <p>Contact : <a href="mailto:contact@vvzstudio.com">contact@vvzstudio.com</a> · Assistance : <a href="mailto:support@vvzstudio.com">support@vvzstudio.com</a></p>
+  </footer>
 <script src="/js/bot-link.js?v=d75b92d3" defer></script>
+<script src="/js/script.js?v=151c572" defer></script>
 </body>
 </html>

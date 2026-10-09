@@ -57,43 +57,52 @@
 <body id="top">
 
   <header class="top">
-    <div class="c navbar">
-      <a class="brand" href="#top">
-        <img class="brand-logo" src="/img/brand/vvz-logo-web.png" alt="VVZ Studio" width="1724" height="265" decoding="async">
-      </a>
+    <div class="c">
+      <div class="navbar">
+      <div class="header-row header-row--brand">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="/img/brand/vvz-logo-header.png" alt="VVZ Studio" width="2172" height="724" decoding="async">
+        </a>
 
-      <nav class="navlinks" aria-label="Основная навигация">
-        <a href="#work">Как работает</a>
-        <a href="#services">Решения</a>
-        <a href="#process">Внедрение</a>
-        <a href="#trust">Доверие</a>
-        <a href="#services-seo">Секторы</a>
-        <a href="#pricing">Стоимость</a>
-        <a href="/demonstration-ru.html">Демонстрация</a>
-        <a href="/blog/">Blog</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="navRight">
-        <div class="langMenu" aria-label="Язык">
-          <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Язык">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
-                stroke-width="1.8" />
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-              <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
-                stroke-width="1.8" />
-            </svg>
-          </button>
-          <div class="langDropdown" role="menu">
-            <a href="/index-en.html" role="menuitem">Английский.<span class="langTag">EN</span></a>
-            <a href="/" role="menuitem">Французский.<span class="langTag">FR</span></a>
-            <a href="/index-ru.html" role="menuitem">Русский.<span class="langTag">RU</span></a>
+        <div class="navRight">
+          <div class="langMenu" aria-label="Язык">
+            <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Язык">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <div class="langDropdown" role="menu">
+              <a href="/index-en.html" data-language="en" role="menuitem">Английский.<span class="langTag">EN</span></a>
+              <a href="/" data-language="fr" role="menuitem">Французский.<span class="langTag">FR</span></a>
+              <a href="/index-ru.html" data-language="ru" role="menuitem">Русский.<span class="langTag">RU</span></a>
+            </div>
           </div>
         </div>
-        <a class="btn btnP navCta" href="#contact">
-          Запросить демонстрацию
-        </a>
+      </div>
+
+      <div class="header-row header-row--nav">
+        <nav class="navlinks" aria-label="Основная навигация">
+          <a href="#work">Как работает</a>
+          <a href="#services">Решения</a>
+          <a href="#process">Внедрение</a>
+          <a href="#trust">Доверие</a>
+          <a href="#services-seo">Секторы</a>
+          <a href="#pricing">Стоимость</a>
+          <a href="/demonstration-ru.html">Демонстрация</a>
+          <a href="/blog/">Blog</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn btnP navCta" href="#contact">
+            Обсудить проект
+          </a>
+        </div>
+      </div>
       </div>
     </div>
   </header>
@@ -104,10 +113,10 @@
         <h1 class="hero-title">Разрабатываем программные системы и автоматизацию для бизнеса</h1>
         <p class="lead">Проектируем и разрабатываем решения под реальные процессы бизнеса: VVZ ERP Suite, сайты, Telegram-боты, Python/backend-системы, API-интеграции и автоматизацию.</p>
 
-        <div class="proof-row" aria-label="Доказательства">
-          <div class="proof"><span class="dot" aria-hidden="true"></span> От анализа процесса до рабочего решения.</div>
-          <div class="proof"><span class="dot" aria-hidden="true"></span> Сайт, backend, API и Telegram — как части одной системы.</div>
-          <div class="proof"><span class="dot" aria-hidden="true"></span> Архитектура и модули под задачи вашего бизнеса.</div>
+        <div class="proof-row hero-semantic-grid" style="display:grid;grid-template-columns:minmax(0,max-content);justify-content:center;max-width:100%;" aria-label="Доказательства">
+          <a class="btn" style="width:100%;" href="#process">От анализа процесса до рабочего решения.</a>
+          <a class="btn" style="width:100%;" href="#work">Сайт, backend, API и Telegram — как части одной системы.</a>
+          <a class="btn" style="width:100%;" href="#trust">Архитектура и модули под задачи вашего бизнеса.</a>
         </div>
 
         <div class="heroMedia">
@@ -126,23 +135,9 @@
         <p class="lead">Интеграция в существующий сайт или готовое решение под ключ.</p>
 
         <div class="formActions mt-14">
-          <a class="btn btnP navCta" href="#services">Наши решения</a>
-          <a class="btn" href="#contact">Обсудить проект</a>
+          <a href="#services">Наши решения</a>
         </div>
 
-        <div class="cta-row">
-          <a class="btn" href="https://t.me/vvz_ai_bot" target="_blank" rel="noopener"><svg class="cta-ic" aria-hidden="true"><use href="#i-telegram"></use></svg>Telegram</a>
-          <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener">
-            <svg class="cta-ic" aria-hidden="true">
-              <use href="#i-whatsapp"></use>
-            </svg>WhatsApp</a>
-          <a class="btn" href="mailto:contact@vvzstudio.com">
-            <svg class="cta-ic" aria-hidden="true">
-              <use href="#i-email"></use>
-            </svg>Почта</a>
-        </div>
-
-        <p class="note">Прямая связь доступна через Telegram, WhatsApp или почту.</p>
       </div>
     </div>
   </section>
@@ -205,15 +200,17 @@
 
   <section id="services-seo">
     <div class="c">
-      <h2>Отраслевые решения VVZ ERP Suite</h2>
+      <h2>Секторы VVZ ERP Suite</h2>
       <p class="lead">Каждый сектор использует один движок VVZ ERP Suite со своими услугами, статусами и рабочими правилами.</p>
       <div class="grid3 mt-14">
-        <div class="card"><h3>Гаражи и автосервис.</h3><p>Заявки на диагностику, ремонт или запись попадают в локальный журнал с подтверждением и итоговым статусом.</p><div class="formActions mt-12"><a class="btn btnP" href="auto-service-website-ru.html">Открыть сектор</a></div></div>
-        <div class="card"><h3>Клининг и бытовые услуги.</h3><p>Уборка квартир, домов, офисов, после ремонта, окон и подготовка арендного жилья могут проходить через тот же локальный процесс.</p><div class="formActions mt-12"><a class="btn btnP" href="cleaning-service-system-ru.html">Открыть сектор</a></div></div>
-        <div class="card"><h3>Шиномонтаж и мобильный шинный сервис.</h3><p>Сезонные заявки, хранение и выездной сервис могут проходить через тот же рабочий процесс.</p><div class="formActions mt-12"><a class="btn btnP" href="tire-shop-website-ru.html">Открыть сектор</a></div></div>
-        <div class="card"><h3>Парикмахерские и салоны красоты.</h3><p>Заявки на запись и выбор услуг можно настроить со статусами, которые использует салон.</p><div class="formActions mt-12"><a class="btn btnP" href="beauty-business-system-ru.html">Открыть сектор</a></div></div>
-        <div class="card"><h3>Строительство, ремонт и выездные мастера.</h3><p>Выездные заявки, комментарии и контроль выполнения можно адаптировать под мобильную работу.</p><div class="formActions mt-12"><a class="btn btnP" href="construction-mobile-business-system-ru.html">Открыть сектор</a></div></div>
-        <div class="card"><h3>Другой локальный бизнес.</h3><p>Магазины, мастерские, ассоциации и сервисные компании могут начать с нужных сейчас модулей.</p><div class="formActions mt-12"><a class="btn btnP" href="local-business-website-ru.html">Открыть сектор</a><a class="btn" href="#contact">Проверить задачу</a></div></div>
+        <div class="card"><h3>Гаражи и автосервис.</h3><p>Пропущенные звонки, диагностика, автомобили и детали остаются в разных сообщениях, и команда теряет время на восстановление заявки. <a href="auto-service-website-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Клининг и бытовые услуги.</h3><p>Несколько адресов, команды и изменения в последний момент сложно контролировать без общей картины. <a href="cleaning-service-system-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Шиномонтаж и мобильный шинный сервис.</h3><p>Сезонный спрос, размеры, наличие, записи и монтаж должны быть согласованы от первого сообщения до завершения. <a href="tire-shop-website-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Парикмахерские и салоны красоты.</h3><p>Записи, изменения услуги, сотрудники и пропущенные сообщения быстро усложняют контроль салона. <a href="beauty-business-system-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Строительство, ремонт и выездные мастера.</h3><p>Несколько объектов, бригады, материалы и изменения клиента требуют ясного понимания следующего шага. <a href="construction-mobile-business-system-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Частные стоматологические клиники.</h3><p>Записи, отмены и административный follow-up расходятся между регистратурой, звонками и сообщениями. <a href="dental-clinic-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Сельскохозяйственный бизнес.</h3><p>Сезонные задачи, ресурсы, оборудование и полевые данные быстро меняются и легко рассеиваются. <a href="farming-business-ru.html">Подробнее →</a></p></div>
+        <div class="card"><h3>Другой локальный бизнес.</h3><p>Заявки приходят из разных каналов, а работа слишком сильно зависит от памяти владельца. <a href="local-business-website-ru.html">Подробнее →</a></p></div>
       </div>
     </div>
   </section>
@@ -223,9 +220,9 @@
       <h2>Стоимость</h2>
       <p class="lead">Можно заказать отдельно сайт, Telegram-бота, VVZ ERP Suite, backend/API или автоматизацию, а можно объединить несколько компонентов в одну систему. Ниже указаны ориентиры начальной стоимости; итоговая смета подтверждается после подготовки требований.</p>
       <div class="grid3 mt-14">
-        <div class="card"><h3>Отдельные направления.</h3><p><strong>Сайт — от 390 €.</strong> От простого сайта на 3–5 страниц до профессиональных и сложных проектов примерно от 2 500 € и выше, далее — по смете. Цена зависит от количества страниц, дизайна, языков, форм, функций, контента и интеграций.</p><p>Проект уровня текущего сайта VVZ Studio — многоязычный responsive-сайт с большим количеством страниц, индивидуальным дизайном, SEO-структурой и формами, без отдельной специфической backend-разработки — ориентировочно относится к уровню около 2 500 €.</p><p><strong>Telegram-бот — от 290 €.</strong> <strong>Форма на существующем сайте — от 120 €.</strong> При сложном CMS, CRM, API или legacy-окружении цена определяется после технической оценки.</p><p><strong>Python / Backend / API — от 290 €.</strong> <strong>Автоматизация процессов — от 190 €.</strong> Далее — в зависимости от проекта и по смете.</p><div class="formActions mt-12"><a class="btn" href="#contact">Описать задачу</a></div></div>
-        <div class="card"><h3>VVZ ERP Suite и комплексное решение.</h3><p><strong>VVZ ERP Suite — от 490 €</strong> за базовую конфигурацию для 1 пользователя: приём заявок, серверная обработка, Telegram-уведомления для рабочего процесса, рабочие статусы, локальный журнал и ручной CSV-экспорт. Стоимость растёт в зависимости от количества пользователей, нужных модулей, интеграций, автоматизации и бизнес-процессов.</p><p>Минимальные отдельные цены: сайт 390 € + VVZ ERP Suite 490 € + самостоятельный Telegram-бот 290 € = 1 170 €. <strong>Комплексное решение VVZ</strong>, где сайт, ERP и Telegram workflow проектируются сразу как одна система, начинается от <strong>990 €</strong>.</p><p>Это не искусственная скидка на отдельного бота: Telegram workflow является частью общей архитектуры, поэтому не требуется отдельно разрабатывать и затем связывать три независимых продукта. Наши решения можно подключить и к уже существующему сайту.</p><div class="formActions mt-12"><a class="btn" href="#contact">Обсудить состав</a></div></div>
-        <div class="card"><h3>Обслуживание, хостинг и условия.</h3><p><strong>Обычный сайт — от 19,90 €/месяц.</strong> Для более серьёзных сайтов или серверных компонентов — <strong>от 29,90 €/месяц</strong>. Для ERP или комплексной системы используется выделенная серверная среда клиента; соответствующий сервис включает хостинг, HTTPS, резервные копии, мониторинг и базовую техническую поддержку <strong>от 39,90 €/месяц</strong>. Доменное имя принадлежит клиенту.</p><p>При обслуживании и выделенной инфраструктуре минимум на 12 месяцев первоначальный запуск полного комплекса может начинаться от <strong>890 €</strong> плюс сервис от <strong>39,90 €/месяц</strong>. Льготная первоначальная цена связана с годовым обслуживанием, а не просто с покупкой нескольких услуг.</p><p>Все цены ориентировочные. Требования и смета подтверждаются до начала работ; дополнительные требования вне согласованного объёма оцениваются отдельно. Перенос на собственный сервер клиента является отдельной платной услугой: после минимального срока обслуживания применяется стандартный тариф; до окончания минимального периода в 12 месяцев применяется повышенный тариф досрочного переноса.</p><p>После успешного переноса и проверки работоспособности данные клиента удаляются из инфраструктуры VVZ Studio; остаточные резервные копии удаляются согласно установленному сроку хранения.</p><div class="formActions mt-12"><a class="btn" href="#contact">Запросить смету</a></div></div>
+        <div class="card"><h3>Отдельные направления.</h3><p><strong>Сайт — от 390 €.</strong> От простого сайта на 3–5 страниц до профессиональных и сложных проектов примерно от 2 500 € и выше, далее — по смете. Цена зависит от количества страниц, дизайна, языков, форм, функций, контента и интеграций.</p><p>Проект уровня текущего сайта VVZ Studio — многоязычный responsive-сайт с большим количеством страниц, индивидуальным дизайном, SEO-структурой и формами, без отдельной специфической backend-разработки — ориентировочно относится к уровню около 2 500 €.</p><p><strong>Telegram-бот — от 290 €.</strong> <strong>Форма на существующем сайте — от 120 €.</strong> При сложном CMS, CRM, API или legacy-окружении цена определяется после технической оценки.</p><p><strong>Python / Backend / API — от 290 €.</strong> <strong>Автоматизация процессов — от 190 €.</strong> Далее — в зависимости от проекта и по смете.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="Сайт или веб-решение" data-pricing-message="Хочу обсудить отдельные направления: сайт, Telegram-бот, Python/backend или автоматизацию.">Описать задачу</a></div></div>
+        <div class="card"><h3>VVZ ERP Suite и комплексное решение.</h3><p><strong>VVZ ERP Suite — от 490 €</strong> за базовую конфигурацию для 1 пользователя: приём заявок, серверная обработка, Telegram-уведомления для рабочего процесса, рабочие статусы, локальный журнал и ручной CSV-экспорт. Стоимость растёт в зависимости от количества пользователей, нужных модулей, интеграций, автоматизации и бизнес-процессов.</p><p>Минимальные отдельные цены: сайт 390 € + VVZ ERP Suite 490 € + самостоятельный Telegram-бот 290 € = 1 170 €. <strong>Комплексное решение VVZ</strong>, где сайт, ERP и Telegram workflow проектируются сразу как одна система, начинается от <strong>990 €</strong>.</p><p>Это не искусственная скидка на отдельного бота: Telegram workflow является частью общей архитектуры, поэтому не требуется отдельно разрабатывать и затем связывать три независимых продукта. Наши решения можно подключить и к уже существующему сайту.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="VVZ ERP Suite" data-pricing-message="Хочу обсудить VVZ ERP Suite и комплексное решение.">Обсудить состав</a></div></div>
+        <div class="card"><h3>Обслуживание, хостинг и условия.</h3><p><strong>Обычный сайт — от 19,90 €/месяц.</strong> Для более серьёзных сайтов или серверных компонентов — <strong>от 29,90 €/месяц</strong>. Для ERP или комплексной системы используется выделенная серверная среда клиента; соответствующий сервис включает хостинг, HTTPS, резервные копии, мониторинг и базовую техническую поддержку <strong>от 39,90 €/месяц</strong>. Доменное имя принадлежит клиенту.</p><p>При обслуживании и выделенной инфраструктуре минимум на 12 месяцев первоначальный запуск полного комплекса может начинаться от <strong>890 €</strong> плюс сервис от <strong>39,90 €/месяц</strong>. Льготная первоначальная цена связана с годовым обслуживанием, а не просто с покупкой нескольких услуг.</p><p>Все цены ориентировочные. Требования и смета подтверждаются до начала работ; дополнительные требования вне согласованного объёма оцениваются отдельно. Перенос на собственный сервер клиента является отдельной платной услугой: после минимального срока обслуживания применяется стандартный тариф; до окончания минимального периода в 12 месяцев применяется повышенный тариф досрочного переноса.</p><p>После успешного переноса и проверки работоспособности данные клиента удаляются из инфраструктуры VVZ Studio; остаточные резервные копии удаляются согласно установленному сроку хранения.</p><div class="formActions mt-12"><a class="btn" href="#contact" data-pricing-project="Сайт или веб-решение" data-pricing-message="Хочу обсудить обслуживание, хостинг и условия.">Запросить смету</a></div></div>
       </div>
     </div>
   </section>
@@ -279,13 +276,13 @@
           <h3>Обсудить задачу</h3>
           <p>Опишите, что нужно разработать или автоматизировать: VVZ ERP Suite, сайт, Telegram-бот, backend/API или отдельный рабочий сценарий.</p>
           <div class="ctaList">
-            <a class="btn" href="https://t.me/vyto1501" target="_blank" rel="noopener"><svg class="cta-ic">
+            <a class="contact-link" href="https://t.me/vyto1501" target="_blank" rel="noopener"><svg class="cta-ic">
                 <use href="#i-telegram"></use>
               </svg> Telegram</a>
-            <a class="btn" href="https://wa.me/33605997424" target="_blank" rel="noopener"><svg class="cta-ic">
+            <a class="contact-link" href="https://wa.me/33605997424" target="_blank" rel="noopener"><svg class="cta-ic">
                 <use href="#i-whatsapp"></use>
               </svg> WhatsApp</a>
-            <a class="btn" href="mailto:contact@vvzstudio.com"><svg class="cta-ic">
+            <a class="contact-link" href="mailto:contact@vvzstudio.com"><svg class="cta-ic">
                 <use href="#i-email"></use>
               </svg> Почта</a>
           </div>
@@ -346,6 +343,25 @@
         d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5.3-8-5.3V6l8 5 8-5v2.2z" />
     </symbol>
   </svg>
+
+  <script>
+    (() => {
+      const form = document.getElementById("quoteForm");
+      const project = form && form.querySelector('[name="project"]');
+      const message = form && form.querySelector('[name="message"]');
+      if (!project || !message) return;
+
+      document.querySelectorAll("[data-pricing-project]").forEach((link) => {
+        link.addEventListener("click", () => {
+          const option = Array.from(project.options).find(
+            (item) => item.textContent.trim() === link.dataset.pricingProject
+          );
+          if (option) project.value = option.value;
+          message.value = link.dataset.pricingMessage || "";
+        });
+      });
+    })();
+  </script>
 
   <script src="/js/bot-link.js?v=d75b92d3" defer></script>
 

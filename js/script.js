@@ -1,4 +1,65 @@
+const VVZ_LANGUAGE_STORAGE_KEY = "vvzstudioLanguageChoice";
+const VVZ_LANGUAGE_PATHS = {
+  fr: "/",
+  en: "/index-en.html",
+  ru: "/index-ru.html",
+};
+
+function initVVZLanguageRouting() {
+  const languageForPath = (path) => {
+    if (path === VVZ_LANGUAGE_PATHS.en) return "en";
+    if (path === VVZ_LANGUAGE_PATHS.ru) return "ru";
+    if (path === VVZ_LANGUAGE_PATHS.fr) return "fr";
+    return null;
+  };
+
+  const readSavedLanguage = () => {
+    try {
+      const savedLanguage = window.localStorage.getItem(VVZ_LANGUAGE_STORAGE_KEY);
+      return Object.prototype.hasOwnProperty.call(VVZ_LANGUAGE_PATHS, savedLanguage)
+        ? savedLanguage
+        : null;
+    } catch (storageError) {
+      return null;
+    }
+  };
+
+  const saveLanguage = (language) => {
+    try {
+      window.localStorage.setItem(VVZ_LANGUAGE_STORAGE_KEY, language);
+    } catch (storageError) {
+      // Continue normally when persistent storage is unavailable.
+    }
+  };
+
+  const browserLanguage = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages[0]
+    : navigator.language;
+  const normalizedBrowserLanguage = String(browserLanguage || "").toLowerCase();
+  const browserTargetLanguage = normalizedBrowserLanguage.startsWith("ru")
+    ? "ru"
+    : normalizedBrowserLanguage.startsWith("en")
+      ? "en"
+      : "fr";
+  const savedLanguage = readSavedLanguage();
+
+  if (window.location.pathname === "/") {
+    const targetLanguage = savedLanguage || browserTargetLanguage;
+    const targetPath = VVZ_LANGUAGE_PATHS[targetLanguage];
+    if (targetPath !== window.location.pathname) {
+      window.location.replace(targetPath);
+      return;
+    }
+  }
+
+  document.querySelectorAll(".langDropdown a").forEach((link) => {
+    const language = link.dataset.language || languageForPath(new URL(link.href, window.location.href).pathname);
+    if (language) link.addEventListener("click", () => saveLanguage(language));
+  });
+}
+
 function initVVZSite() {
+  initVVZLanguageRouting();
   // ==========================================
   // 1. ОБНОВЛЕНИЕ ГОДА В ФУТЕРЕ
   // ==========================================
