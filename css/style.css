@@ -605,6 +605,13 @@ section:first-of-type{ padding-top: 26px; }
   margin: 10px 0 6px;
   font-size: 13px;
 }
+.form-required-legend{
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.72);
+  font-size: 13px;
+  font-weight: 700;
+}
+.required-marker{ color: #ffb0b0; }
 
 /* ИСПРАВЛЕНИЕ: Поля ввода теперь по размеру идеально совпадают с кнопками (padding 14px 16px) */
 input, select, textarea{
@@ -623,7 +630,35 @@ input:focus, select:focus, textarea:focus{
   border-color: rgba(42,92,255,.55);
   box-shadow: 0 0 0 5px rgba(42,92,255,.14);
 }
+input.is-invalid, select.is-invalid, textarea.is-invalid,
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"]{
+  border-color: #ff5c5c;
+  box-shadow: 0 0 0 4px rgba(255,92,92,.18);
+}
+input.is-invalid:focus, select.is-invalid:focus, textarea.is-invalid:focus,
+input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus, textarea[aria-invalid="true"]:focus{
+  border-color: #ff8585;
+  box-shadow: 0 0 0 5px rgba(255,92,92,.24);
+}
 textarea{ resize: vertical; }
+.field-example{
+  display: block;
+  margin-top: 5px;
+  color: rgba(255,255,255,.62);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.field-error{
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 6px;
+  color: #ff9b9b;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.field-error[hidden]{ display: none; }
 .formActions{ display:flex; flex-wrap:wrap; gap: 10px; align-items:center; margin-top: 12px; }
 .status{ margin-top: 10px; font-size: 13px; color: var(--muted); }
 

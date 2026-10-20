@@ -246,8 +246,210 @@ function initVVZSite() {
   // Ищем формы либо по ID (VVZ Studio), либо по data-атрибуту (Garage Dupont)
   const leadForms = Array.from(document.querySelectorAll("#quoteForm, [data-contact-form]"));
 
-  leadForms.forEach((quoteForm) => {
-    quoteForm.setAttribute("novalidate", "novalidate");
+  leadForms.forEach((quoteForm, formIndex) => {
+    const validationText = {
+      en: {
+        legend: "* — Required field",
+        exampleLabel: "Example",
+        required: (example) => `This field is required. Valid example: ${example}`,
+        tooShort: (min, example) => `Please enter at least ${min} characters. Valid example: ${example}`,
+        tooLong: (max, example) => `Please use ${max} characters or fewer. Valid example: ${example}`,
+        email: (example) => `Enter a valid email address. Valid example: ${example}`,
+        phone: (example) => `Enter a valid phone number, for example: ${example}`,
+        summary: "Please correct the highlighted fields.",
+        network: "Network error. Check your connection and try again.",
+        server: "Server submission error. Please try again later.",
+        examples: {
+          name: "Marie Dupont",
+          email: "marie.dupont+site@example.com",
+          phone: "+33 6 12 34 56 78",
+          city: "Lyon",
+          business: "Auto repair shop",
+          project: "VVZ ERP Suite",
+          message: "We need to track requests, statuses and team reminders.",
+        },
+      },
+      fr: {
+        legend: "* — Champ obligatoire",
+        exampleLabel: "Exemple",
+        required: (example) => `Ce champ est obligatoire. Exemple valide : ${example}`,
+        tooShort: (min, example) => `Saisissez au moins ${min} caractères. Exemple valide : ${example}`,
+        tooLong: (max, example) => `Utilisez ${max} caractères ou moins. Exemple valide : ${example}`,
+        email: (example) => `Saisissez une adresse e-mail valide. Exemple valide : ${example}`,
+        phone: (example) => `Saisissez un numéro valide, par exemple : ${example}`,
+        summary: "Corrigez les champs signalés.",
+        network: "Erreur réseau. Vérifiez votre connexion puis réessayez.",
+        server: "Erreur d’envoi au serveur. Réessayez plus tard.",
+        examples: {
+          name: "Marie Dupont",
+          email: "marie.dupont+site@example.com",
+          phone: "06 12 34 56 78",
+          city: "Lyon",
+          business: "Garage automobile",
+          project: "VVZ ERP Suite",
+          message: "Nous voulons suivre les demandes, les statuts et les rappels de l’équipe.",
+        },
+      },
+      ru: {
+        legend: "* — Обязательное поле",
+        exampleLabel: "Пример",
+        required: (example) => `Это поле обязательно. Пример корректного значения: ${example}`,
+        tooShort: (min, example) => `Введите не менее ${min} символов. Пример корректного значения: ${example}`,
+        tooLong: (max, example) => `Используйте не более ${max} символов. Пример корректного значения: ${example}`,
+        email: (example) => `Введите корректный адрес электронной почты. Пример: ${example}`,
+        phone: (example) => `Введите корректный номер телефона, например: ${example}`,
+        summary: "Исправьте отмеченные поля.",
+        network: "Ошибка сети. Проверьте соединение и повторите попытку.",
+        server: "Ошибка отправки на сервер. Повторите попытку позже.",
+        examples: {
+          name: "Мария Иванова",
+          email: "maria.ivanova+site@example.com",
+          phone: "+33 6 12 34 56 78",
+          city: "Лион",
+          business: "Автосервис",
+          project: "VVZ ERP Suite",
+          message: "Нужно отслеживать заявки, статусы и напоминания для команды.",
+        },
+      },
+    };
+    const language = String(document.documentElement.lang || "en").slice(0, 2);
+    const messages = validationText[language] || validationText.en;
+    const formIdPrefix = `lead-form-${formIndex}`;
+    const formFields = Array.from(quoteForm.querySelectorAll("input[name]:not([type=\"hidden\"]), select[name], textarea[name]"));
+
+    const getFieldExample = (field) => messages.examples[field.name] || "a valid value";
+
+    const getFieldLabel = (field) => {
+      if (field.closest("label")) return field.closest("label");
+      const matchingLabel = quoteForm.querySelector(`label[for="${CSS.escape(field.id)}"]`);
+      if (matchingLabel) return matchingLabel;
+      const previous = field.previousElementSibling;
+      if (previous && previous.tagName === "LABEL") return previous;
+      return field.parentElement ? field.parentElement.querySelector("label") : null;
+    };
+
+    const getFieldDescription = (field) => {
+      const fieldIndex = formFields.indexOf(field);
+      const fieldId = `${formIdPrefix}-field-${fieldIndex}`;
+      const exampleId = `${fieldId}-example`;
+      const errorId = `${fieldId}-error`;
+      if (!field.id) field.id = fieldId;
+
+      const label = getFieldLabel(field);
+      if (label && !field.closest("label")) label.setAttribute("for", field.id);
+      if (label && field.required && !label.querySelector(".required-marker")) {
+        const marker = document.createElement("span");
+        marker.className = "required-marker";
+        marker.setAttribute("aria-hidden", "true");
+        marker.textContent = " *";
+        label.appendChild(marker);
+      }
+
+      let example = quoteForm.querySelector(`#${CSS.escape(exampleId)}`);
+      if (!example) {
+        example = document.createElement("span");
+        example.id = exampleId;
+        example.className = "field-example";
+        example.textContent = `${messages.exampleLabel || "Example"}: ${getFieldExample(field)}`;
+        field.insertAdjacentElement("afterend", example);
+      }
+
+      let error = quoteForm.querySelector(`#${CSS.escape(errorId)}`);
+      if (!error) {
+        error = document.createElement("span");
+        error.id = errorId;
+        error.className = "field-error";
+        error.setAttribute("role", "alert");
+        error.hidden = true;
+        example.insertAdjacentElement("afterend", error);
+      }
+
+      const describedBy = new Set((field.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean));
+      describedBy.add(example.id);
+      field.setAttribute("aria-describedby", Array.from(describedBy).join(" "));
+      return { error, example };
+    };
+
+    const requiredLegend = document.createElement("p");
+    requiredLegend.className = "form-required-legend";
+    requiredLegend.textContent = messages.legend;
+    const formHeading = quoteForm.querySelector(":scope > h3");
+    if (formHeading) formHeading.insertAdjacentElement("afterend", requiredLegend);
+    else quoteForm.insertAdjacentElement("afterbegin", requiredLegend);
+
+    const fieldMessage = (field) => {
+      const value = String(field.value || "").trim();
+      const minLength = field.name === "name" ? 2 : field.name === "message" ? 10 : 0;
+      const maxLength = {
+        name: 80,
+        email: 160,
+        phone: 40,
+        city: 80,
+        business: 120,
+        project: 80,
+        message: 1500,
+      }[field.name];
+
+      if (field.required && !value) return messages.required(getFieldExample(field));
+      if (!value) return "";
+      if (field.name === "email" && !/^[^\s@]+@[^\s@]+(?:\.[^\s@]+)+$/.test(value)) {
+        return messages.email(getFieldExample(field));
+      }
+      if (field.name === "phone") {
+        const normalizedPhone = value.replace(/[\s().-]/g, "");
+        if (!/^(?:\+|00)?\d{8,15}$/.test(normalizedPhone)) {
+          return messages.phone(getFieldExample(field));
+        }
+      }
+      if (minLength && value.length < minLength) return messages.tooShort(minLength, getFieldExample(field));
+      if (maxLength && value.length > maxLength) return messages.tooLong(maxLength, getFieldExample(field));
+      return "";
+    };
+
+    const renderFieldError = (field, overrideMessage = "") => {
+      const message = overrideMessage || fieldMessage(field);
+      const { error } = getFieldDescription(field);
+      const describedBy = new Set((field.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean));
+
+      if (message) {
+        error.textContent = `⚠ ${message}`;
+        error.hidden = false;
+        field.classList.add("is-invalid");
+        field.setAttribute("aria-invalid", "true");
+        describedBy.add(error.id);
+        field.setAttribute("aria-describedby", Array.from(describedBy).join(" "));
+      } else {
+        error.textContent = "";
+        error.hidden = true;
+        field.classList.remove("is-invalid");
+        field.setAttribute("aria-invalid", "false");
+        describedBy.delete(error.id);
+        field.setAttribute("aria-describedby", Array.from(describedBy).join(" "));
+      }
+      return message;
+    };
+
+    quoteForm.addEventListener("invalid", (event) => {
+      if (!formFields.includes(event.target)) return;
+      event.preventDefault();
+      event.target.dataset.touched = "true";
+      renderFieldError(event.target);
+    }, true);
+
+    formFields.forEach((field) => {
+      getFieldDescription(field);
+      const updateAfterEdit = () => {
+        if (field.getAttribute("aria-invalid") === "true" || field.dataset.touched === "true") {
+          renderFieldError(field);
+        }
+      };
+      field.addEventListener("input", updateAfterEdit);
+      field.addEventListener("change", updateAfterEdit);
+      field.addEventListener("blur", () => {
+        field.dataset.touched = "true";
+        renderFieldError(field);
+      });
+    });
 
     const setFieldLimits = (name, attrs) => {
       const field = quoteForm.querySelector(`[name="${name}"]`);
@@ -280,6 +482,19 @@ function initVVZSite() {
 
       const originalBtnText = btn.textContent;
 
+      const invalidFields = formFields.filter((field) => {
+        field.dataset.touched = "true";
+        return Boolean(renderFieldError(field));
+      });
+
+      if (invalidFields.length) {
+        status.style.color = "#ff8a8a";
+        status.style.opacity = "1";
+        status.textContent = messages.summary;
+        invalidFields[0].focus();
+        return;
+      }
+
       // Визуальный фидбек: блокируем кнопку
       btn.disabled = true;
       btn.textContent = "...";
@@ -302,27 +517,6 @@ function initVVZSite() {
       const cityValue = trimmedValue("city");
       const businessValue = trimmedValue("business");
       const messageValue = trimmedValue("message");
-      const isInvalid =
-        nameValue.length < 2 ||
-        nameValue.length > 80 ||
-        !phoneValue ||
-        phoneValue.length > 40 ||
-        !cityValue ||
-        cityValue.length > 80 ||
-        !businessValue ||
-        businessValue.length > 120 ||
-        messageValue.length < 10 ||
-        messageValue.length > 1500;
-
-      if (isInvalid) {
-        status.style.color = "#ff4d4d";
-        status.style.opacity = "1";
-        status.textContent = "Error. Please contact us via WhatsApp.";
-        btn.disabled = false;
-        btn.textContent = originalBtnText;
-        return;
-      }
-
       formData.set("name", nameValue);
       formData.set("message", messageValue);
       if (emailValue) formData.set("email", emailValue);
@@ -362,7 +556,10 @@ function initVVZSite() {
           result = null;
         }
         if (!response.ok || !result || result.ok !== true) {
-          throw new Error(result && result.detail ? result.detail : `Lead submit failed: ${response.status}`);
+          const submissionError = new Error(result && result.detail ? result.detail : `Lead submit failed: ${response.status}`);
+          submissionError.field = result && result.field;
+          submissionError.errorCode = result && result.error_code;
+          throw submissionError;
         }
         clearLeadIdempotencyState(formDataFingerprint, idempotencyKey);
 
@@ -394,7 +591,25 @@ function initVVZSite() {
       } catch (error) {
         console.error("Submission error:", error);
         status.style.color = "#ff4d4d";
-        status.textContent = "Error. Please contact us via WhatsApp.";
+        const responseField = error && error.field;
+        const responseCode = error && error.errorCode;
+        const field = responseField
+          ? formFields.find((candidate) => candidate.name === responseField)
+          : null;
+        const backendMessage = field && responseCode === "field_required"
+          ? messages.required(getFieldExample(field))
+          : field && responseCode === "email_invalid"
+            ? messages.email(getFieldExample(field))
+            : field && responseCode === "phone_invalid"
+              ? messages.phone(getFieldExample(field))
+              : null;
+        if (field && backendMessage) {
+          field.dataset.touched = "true";
+          renderFieldError(field, backendMessage);
+          status.textContent = messages.summary;
+        } else {
+          status.textContent = error instanceof TypeError ? messages.network : messages.server;
+        }
         btn.disabled = false;
         btn.textContent = originalBtnText;
       }
